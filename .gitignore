@@ -1,0 +1,13 @@
+.claude/worktrees/
+
+# Large video files — store locally, not in git
+video/
+videos/
+*.mp4
+*.mov
+*.avi
+*.mkv
+
+# Zip archives
+*.zip
+photos.zip

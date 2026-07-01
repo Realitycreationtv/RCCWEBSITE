@@ -1,0 +1,544 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Discover You Podcast &mdash; Real conversations about fulfilment, purpose, resilience, and personal growth. Hosted by Joel Benesha.">
+<title>Discover You Podcast &mdash; Reality Creation Centre</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Libre+Baskerville:ital,wght@0,400;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+:root{--gold:#F7C331;--purple:#7C2AE8;--pod-dark:#0A0812}
+#pod-hero{min-height:100vh;min-height:100svh;background:var(--pod-dark);position:relative;overflow:hidden;display:flex;align-items:center;padding:120px 40px 80px}
+.ph-bg{position:absolute;inset:0;background:url('photos/PODCASt with herve.JPG') center 30%/cover no-repeat;opacity:.22;transform:scale(1.04)}
+.ph-grad{position:absolute;inset:0;background:linear-gradient(105deg,rgba(10,8,18,.96) 42%,rgba(10,8,18,.55) 100%)}
+.ph-glow{position:absolute;top:-160px;left:-120px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(124,42,232,.28) 0%,transparent 70%);pointer-events:none}
+.ph-inner{position:relative;z-index:2;max-width:1100px;margin:0 auto;width:100%}
+.ph-badge{display:inline-flex;align-items:center;gap:12px;border:1px solid rgba(247,195,49,.35);border-radius:40px;padding:11px 26px;margin-bottom:36px;font-family:'Jost',sans-serif;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.ph-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);animation:pulse-g 2s ease-in-out infinite}
+@keyframes pulse-g{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+.ph-h1{font-family:'Playfair Display',serif;font-size:clamp(48px,8vw,88px);font-weight:400;line-height:1;color:#fff;margin:0 0 8px}
+.ph-h1 em{color:var(--gold);font-style:italic}
+.ph-host{font-family:'Jost',sans-serif;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.45);margin:0 0 28px}
+.ph-sub{font-family:'Jost',sans-serif;font-size:17px;font-weight:300;line-height:1.65;color:rgba(255,255,255,.72);max-width:560px;margin:0 0 48px}
+.ph-acts{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.btn-gold{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:#0A0812;border:none;border-radius:40px;padding:14px 30px;font-family:'Jost',sans-serif;font-size:13px;font-weight:500;letter-spacing:.05em;cursor:pointer;text-decoration:none;transition:opacity .2s,transform .2s}
+.btn-gold:hover{opacity:.88;transform:translateY(-1px)}
+.btn-ghost-pod{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.28);color:rgba(255,255,255,.8);border-radius:40px;padding:13px 26px;font-family:'Jost',sans-serif;font-size:13px;font-weight:300;letter-spacing:.04em;text-decoration:none;transition:border-color .2s,color .2s;background:transparent}
+.btn-ghost-pod:hover{border-color:rgba(255,255,255,.6);color:#fff}
+.ph-platforms{display:flex;align-items:center;gap:24px;margin-top:56px;flex-wrap:wrap}
+.ph-plat-label{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.3)}
+.ph-plat-links{display:flex;gap:18px;align-items:center}
+.ph-plat-a{display:flex;align-items:center;gap:7px;font-family:'Jost',sans-serif;font-size:12px;color:rgba(255,255,255,.55);text-decoration:none;transition:color .2s}
+.ph-plat-a:hover{color:#fff}
+.ph-plat-a svg{width:18px;height:18px;flex-shrink:0}
+#pod-what{background:var(--cream);padding:100px 40px}
+.pod-what-wrap{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.pod-what-img{border-radius:16px;overflow:hidden;aspect-ratio:4/3;position:relative}
+.pod-what-img img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.pod-what-img-tag{position:absolute;bottom:20px;left:20px;right:20px;background:rgba(10,8,18,.82);backdrop-filter:blur(8px);border-radius:10px;padding:14px 18px;font-family:'Jost',sans-serif;font-size:12px;color:rgba(243,240,235,.7);border:1px solid rgba(255,255,255,.08)}
+.pod-what-img-tag strong{color:#fff;display:block;font-size:14px;margin-bottom:2px}
+.pod-sec-label{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--purple);margin-bottom:18px}
+.pod-what-hed{font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,48px);font-weight:400;line-height:1.12;color:var(--void);margin:0 0 24px}
+.pod-what-hed em{font-style:italic;color:var(--purple)}
+.pod-what-p{font-family:'Jost',sans-serif;font-size:16px;font-weight:300;line-height:1.75;color:rgba(26,24,20,.72);margin:0 0 16px}
+#pod-stats{background:var(--void);padding:80px 40px}
+.pod-stats-wrap{max-width:1100px;margin:0 auto}
+.pod-stats-label{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:rgba(243,240,235,.35);text-align:center;margin-bottom:56px}
+.pod-stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.06);border-radius:16px;overflow:hidden}
+.pod-stat{background:rgba(255,255,255,.03);padding:40px 28px;text-align:center}
+.pod-stat-n{font-family:'Playfair Display',serif;font-size:clamp(36px,5vw,54px);font-weight:400;color:var(--gold);display:block;line-height:1;margin-bottom:10px}
+.pod-stat-l{font-family:'Jost',sans-serif;font-size:12px;font-weight:300;letter-spacing:.12em;color:rgba(243,240,235,.45);text-transform:uppercase}
+.pod-platforms-row{display:flex;justify-content:center;align-items:center;gap:32px;margin-top:48px;flex-wrap:wrap}
+.pod-plat-chip{display:flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,.1);border-radius:40px;padding:10px 22px;font-family:'Jost',sans-serif;font-size:13px;color:rgba(243,240,235,.6);text-decoration:none;transition:border-color .2s,color .2s}
+.pod-plat-chip svg{width:20px;height:20px;flex-shrink:0}
+.pod-plat-chip:hover{border-color:var(--gold);color:var(--gold)}
+#pod-quiz{background:linear-gradient(135deg,#1A0840 0%,#0D0520 50%,#0A0812 100%);padding:100px 40px;position:relative;overflow:hidden}
+.pod-quiz-orb{position:absolute;right:-200px;top:50%;transform:translateY(-50%);width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(124,42,232,.25) 0%,transparent 70%);pointer-events:none}
+.pod-quiz-wrap{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;position:relative;z-index:1}
+.pod-quiz-hed{font-family:'Playfair Display',serif;font-size:clamp(34px,4.5vw,52px);font-weight:400;line-height:1.12;color:#fff;margin:0 0 16px}
+.pod-quiz-hed em{font-style:italic;color:var(--gold)}
+.pod-quiz-sub{font-family:'Jost',sans-serif;font-size:16px;font-weight:300;line-height:1.7;color:rgba(255,255,255,.65);margin:0 0 20px}
+.pod-quiz-areas{display:flex;flex-direction:column;gap:10px;margin-bottom:36px}
+.pod-quiz-area{display:flex;align-items:center;gap:12px;font-family:'Jost',sans-serif;font-size:14px;font-weight:300;color:rgba(255,255,255,.7)}
+.pod-quiz-dot{width:8px;height:8px;border-radius:50%;background:var(--gold);flex-shrink:0}
+.pod-wheel{display:flex;align-items:center;justify-content:center}
+.pod-wheel svg{width:100%;max-width:380px;height:auto}
+#pod-episodes{background:var(--cream);padding:100px 40px}
+.pod-ep-wrap{max-width:1100px;margin:0 auto}
+.pod-ep-hdr{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:52px;flex-wrap:wrap;gap:20px}
+.pod-ep-hed{font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,48px);font-weight:400;line-height:1.1;color:var(--void);margin:0}
+.pod-ep-hed em{font-style:italic}
+.pod-ep-all{font-family:'Jost',sans-serif;font-size:13px;color:var(--purple);text-decoration:none;border-bottom:1px solid rgba(124,42,232,.3);padding-bottom:2px}
+.pod-ep-all:hover{border-color:var(--purple)}
+.pod-ep-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.pod-ep-card{background:#fff;border-radius:16px;overflow:hidden;border:1px solid rgba(0,0,0,.06);transition:transform .3s,box-shadow .3s;display:flex;flex-direction:column}
+.pod-ep-card:hover{transform:translateY(-4px);box-shadow:0 20px 56px rgba(124,42,232,.1)}
+.pod-ep-thumb{position:relative;aspect-ratio:16/9;overflow:hidden;background:#0A0812}
+.pod-ep-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .5s;display:block}
+.pod-ep-card:hover .pod-ep-thumb img{transform:scale(1.04)}
+.pod-ep-thumb iframe{width:100%;height:100%;border:none;display:none;position:absolute;inset:0}
+.pod-ep-play-btn{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(10,8,18,.35);cursor:pointer;transition:background .2s}
+.pod-ep-play-btn:hover{background:rgba(10,8,18,.2)}
+.pod-ep-play-ico{width:52px;height:52px;border-radius:50%;background:rgba(247,195,49,.9);display:flex;align-items:center;justify-content:center;transition:transform .2s}
+.pod-ep-play-btn:hover .pod-ep-play-ico{transform:scale(1.08)}
+.pod-ep-play-ico svg{width:18px;height:18px;fill:#0A0812;margin-left:3px}
+.pod-ep-body{padding:24px;flex:1;display:flex;flex-direction:column}
+.pod-ep-tag{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--purple);margin-bottom:10px}
+.pod-ep-q{font-family:'Playfair Display',serif;font-size:17px;font-style:italic;line-height:1.45;color:var(--void);margin:0 0 10px}
+.pod-ep-desc{font-family:'Jost',sans-serif;font-size:13.5px;font-weight:300;line-height:1.65;color:rgba(26,24,20,.6);margin:0 0 20px;flex:1}
+.pod-ep-links{display:flex;gap:10px;margin-top:auto;flex-wrap:wrap}
+.pod-ep-btn{display:inline-flex;align-items:center;gap:6px;font-family:'Jost',sans-serif;font-size:12px;text-decoration:none;border-radius:40px;padding:8px 16px;transition:all .2s}
+.pod-ep-btn-watch{background:var(--void);color:#fff}
+.pod-ep-btn-watch:hover{background:#333}
+.pod-ep-btn-listen{border:1px solid rgba(0,0,0,.15);color:rgba(26,24,20,.7)}
+.pod-ep-btn-listen:hover{border-color:rgba(0,0,0,.4)}
+#pod-topics{background:var(--void);padding:100px 40px}
+.pod-topics-wrap{max-width:1100px;margin:0 auto}
+.pod-topics-hed{font-family:'Playfair Display',serif;font-size:clamp(30px,4vw,44px);font-weight:400;color:#fff;margin:0 0 52px;text-align:center}
+.pod-topics-hed em{font-style:italic;color:var(--gold)}
+.pod-topics-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.pod-topic{border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:32px 28px;transition:border-color .3s,background .3s}
+.pod-topic:hover{border-color:rgba(124,42,232,.4);background:rgba(124,42,232,.05)}
+.pod-topic-ico{width:44px;height:44px;border-radius:12px;background:rgba(247,195,49,.12);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.pod-topic-ico svg{width:22px;height:22px;stroke:var(--gold);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.pod-topic-name{font-family:'Jost',sans-serif;font-size:15px;font-weight:400;color:#fff;margin:0 0 8px}
+.pod-topic-desc{font-family:'Jost',sans-serif;font-size:13px;font-weight:300;line-height:1.65;color:rgba(243,240,235,.45);margin:0}
+#pod-host{background:var(--cream);padding:100px 40px}
+.pod-host-wrap{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:400px 1fr;gap:80px;align-items:start}
+.pod-host-img-wrap{position:relative}
+.pod-host-img{width:100%;aspect-ratio:3/4;border-radius:20px;overflow:hidden}
+.pod-host-img img{width:100%;height:100%;object-fit:cover;object-position:center 12%;transform:scale(1.1);transform-origin:center 15%}
+.pod-host-badge{position:absolute;bottom:24px;left:24px;right:24px;background:rgba(10,8,18,.88);backdrop-filter:blur(12px);border-radius:12px;padding:16px 20px;border:1px solid rgba(247,195,49,.2)}
+.pod-host-badge-name{font-family:'Playfair Display',serif;font-size:18px;color:#fff;margin:0 0 4px}
+.pod-host-badge-chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.pod-host-chip{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(247,195,49,.3);color:var(--gold);border-radius:40px;padding:4px 12px}
+.pod-host-label{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--purple);margin-bottom:16px}
+.pod-host-hed{font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,48px);font-weight:400;line-height:1.1;color:var(--void);margin:0 0 24px}
+.pod-host-hed em{font-style:italic}
+.pod-host-bio{font-family:'Jost',sans-serif;font-size:16px;font-weight:300;line-height:1.75;color:rgba(26,24,20,.7);margin:0 0 24px}
+.pod-host-highlights{display:flex;flex-direction:column;gap:12px;margin-bottom:36px}
+.pod-host-hl{display:flex;align-items:center;gap:14px;font-family:'Jost',sans-serif;font-size:14px;font-weight:300;color:rgba(26,24,20,.8)}
+.pod-host-hl-ico{width:32px;height:32px;border-radius:8px;background:rgba(124,42,232,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.pod-host-hl-ico svg{width:16px;height:16px;stroke:var(--purple);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.pod-host-socials{display:flex;gap:12px}
+.pod-host-soc{width:40px;height:40px;border-radius:10px;border:1px solid rgba(0,0,0,.12);display:flex;align-items:center;justify-content:center;text-decoration:none;transition:border-color .2s,background .2s}
+.pod-host-soc:hover{border-color:var(--purple);background:rgba(124,42,232,.06)}
+.pod-host-soc svg{width:18px;height:18px;fill:rgba(26,24,20,.5)}
+.pod-host-soc:hover svg{fill:var(--purple)}
+#pod-guest{background:linear-gradient(135deg,#0D0520 0%,#180840 100%);padding:100px 40px;position:relative;overflow:hidden}
+.pod-guest-orb{position:absolute;left:-150px;bottom:-150px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(247,195,49,.12) 0%,transparent 70%);pointer-events:none}
+.pod-guest-wrap{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;position:relative;z-index:1}
+.pod-guest-hed{font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,48px);font-weight:400;line-height:1.1;color:#fff;margin:0 0 20px}
+.pod-guest-hed em{font-style:italic;color:var(--gold)}
+.pod-guest-p{font-family:'Jost',sans-serif;font-size:16px;font-weight:300;line-height:1.7;color:rgba(255,255,255,.6);margin:0 0 28px}
+.pod-guest-types{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:36px}
+.pod-guest-type{display:flex;align-items:center;gap:10px;font-family:'Jost',sans-serif;font-size:13px;font-weight:300;color:rgba(255,255,255,.65)}
+.pod-guest-type-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0}
+.pod-form{display:flex;flex-direction:column;gap:14px}
+.pod-form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.pod-input{width:100%;box-sizing:border-box;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:14px 18px;font-family:'Jost',sans-serif;font-size:14px;font-weight:300;color:#fff;outline:none;transition:border-color .2s}
+.pod-input::placeholder{color:rgba(255,255,255,.3)}
+.pod-input:focus{border-color:rgba(247,195,49,.5)}
+.pod-textarea{resize:vertical;min-height:100px}
+.pod-form-note{font-family:'Jost',sans-serif;font-size:12px;font-weight:300;color:rgba(255,255,255,.3);margin:0}
+#pod-sponsor{background:var(--cream);padding:100px 40px}
+.pod-sponsor-wrap{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.pod-sponsor-hed{font-family:'Playfair Display',serif;font-size:clamp(30px,4vw,44px);font-weight:400;line-height:1.1;color:var(--void);margin:0 0 20px}
+.pod-sponsor-hed em{font-style:italic}
+.pod-sponsor-p{font-family:'Jost',sans-serif;font-size:16px;font-weight:300;line-height:1.7;color:rgba(26,24,20,.65);margin:0 0 28px}
+.pod-sponsor-ops{display:flex;flex-direction:column;gap:12px;margin-bottom:36px}
+.pod-sponsor-op{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid rgba(0,0,0,.07);border-radius:12px;padding:14px 18px}
+.pod-sponsor-op-ico{width:36px;height:36px;border-radius:8px;background:rgba(124,42,232,.08);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.pod-sponsor-op-ico svg{width:18px;height:18px;stroke:var(--purple);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.pod-sponsor-op-text{font-family:'Jost',sans-serif;font-size:14px;font-weight:300;color:rgba(26,24,20,.75)}
+.pod-sponsor-form-wrap{background:#fff;border-radius:20px;padding:40px;border:1px solid rgba(0,0,0,.07);box-shadow:0 12px 48px rgba(0,0,0,.06)}
+.pod-sponsor-form-hed{font-family:'Playfair Display',serif;font-size:22px;font-weight:400;color:var(--void);margin:0 0 24px}
+.pod-input-light{width:100%;box-sizing:border-box;background:rgba(0,0,0,.03);border:1px solid rgba(0,0,0,.1);border-radius:10px;padding:13px 16px;font-family:'Jost',sans-serif;font-size:14px;font-weight:300;color:var(--void);outline:none;transition:border-color .2s}
+.pod-input-light::placeholder{color:rgba(26,24,20,.35)}
+.pod-input-light:focus{border-color:rgba(124,42,232,.4)}
+.pod-input-light.pod-textarea{resize:vertical;min-height:90px}
+#pod-testimonials{background:var(--void);padding:100px 40px}
+.pod-test-wrap{max-width:1100px;margin:0 auto}
+.pod-test-hed{font-family:'Playfair Display',serif;font-size:clamp(30px,4vw,44px);font-weight:400;color:#fff;margin:0 0 52px;text-align:center}
+.pod-test-hed em{font-style:italic;color:var(--gold)}
+.pod-test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.pod-test-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:32px}
+.pod-test-quote{font-family:'Playfair Display',serif;font-size:16px;font-style:italic;line-height:1.7;color:rgba(243,240,235,.85);margin:0 0 24px}
+.pod-test-person{display:flex;align-items:center;gap:14px}
+.pod-test-avatar{width:44px;height:44px;border-radius:50%;overflow:hidden;flex-shrink:0;background:rgba(124,42,232,.3);display:flex;align-items:center;justify-content:center}
+.pod-test-name{font-family:'Jost',sans-serif;font-size:14px;font-weight:400;color:#fff}
+.pod-test-role{font-family:'Jost',sans-serif;font-size:12px;font-weight:300;color:rgba(243,240,235,.4)}
+#pod-cta{background:linear-gradient(135deg,#0A0812 0%,#1A0840 50%,#0A0812 100%);padding:120px 40px;text-align:center;position:relative;overflow:hidden}
+.pod-cta-orb-l{position:absolute;left:-200px;top:50%;transform:translateY(-50%);width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(124,42,232,.2) 0%,transparent 70%);pointer-events:none}
+.pod-cta-orb-r{position:absolute;right:-200px;top:50%;transform:translateY(-50%);width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(247,195,49,.12) 0%,transparent 70%);pointer-events:none}
+.pod-cta-inner{position:relative;z-index:1;max-width:700px;margin:0 auto}
+.pod-cta-hed{font-family:'Playfair Display',serif;font-size:clamp(40px,7vw,72px);font-weight:400;line-height:1.08;color:#fff;margin:0 0 20px}
+.pod-cta-hed em{font-style:italic;color:var(--gold)}
+.pod-cta-lines{font-family:'Jost',sans-serif;font-size:18px;font-weight:300;line-height:2;color:rgba(255,255,255,.55);margin:0 0 52px}
+.pod-cta-lines span{display:block}
+.pod-cta-acts{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+@media(max-width:900px){.pod-what-wrap,.pod-quiz-wrap,.pod-host-wrap,.pod-guest-wrap,.pod-sponsor-wrap{grid-template-columns:1fr;gap:48px}.pod-ep-grid{grid-template-columns:1fr}.pod-topics-grid{grid-template-columns:1fr 1fr}.pod-test-grid{grid-template-columns:1fr}.pod-stats-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){#pod-hero{padding:100px 24px 60px}#pod-what,#pod-stats,#pod-quiz,#pod-episodes,#pod-topics,#pod-host,#pod-guest,#pod-sponsor,#pod-testimonials,#pod-cta{padding:72px 24px}.pod-topics-grid,.pod-guest-types{grid-template-columns:1fr}.pod-form-row{grid-template-columns:1fr}.pod-host-wrap{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div id="cur"></div>
+<nav id="nav" class="dk">
+  <a href="index.html" class="nlogo">
+    <img src="photos/Logo real.png" alt="Reality Creation Centre" class="nlogo-img" style="width:44px;height:44px;border-radius:8px;object-fit:contain;flex-shrink:0">
+    <div><span class="nlogo-t">Reality Creation</span><span class="nlogo-s">Centre</span></div>
+  </a>
+  <ul class="nlinks">
+    <li><a href="index.html"        class="nl">Home</a></li>
+    <li><a href="coaching.html"     class="nl">Fulfilment</a></li>
+    <li><a href="podcast.html"      class="nl active">Podcast</a></li>
+    <li><a href="media.html"        class="nl">Media &amp; Storytelling</a></li>
+    <li><a href="community.html"    class="nl">Community</a></li>
+    <li><a href="index.html#diagnostic" class="nl ncta">Take Quiz</a></li>
+  </ul>
+  <div class="nham"><span></span><span></span><span></span></div>
+</nav>
+
+<section id="pod-hero">
+  <div class="ph-bg"></div><div class="ph-grad"></div><div class="ph-glow"></div>
+  <div class="ph-inner">
+    <div class="ph-badge"><span class="ph-badge-dot"></span>New episode every 2nd week</div>
+    <h1 class="ph-h1">Discover <em>You</em></h1>
+    <p class="ph-host">Podcast &nbsp;&middot;&nbsp; Hosted by Joel Benesha</p>
+    <p class="ph-sub">Real conversations about fulfilment, purpose, resilience, leadership, business, faith, and personal growth.</p>
+    <div class="ph-acts">
+      <a href="#pod-episodes" class="btn-gold"><svg viewBox="0 0 14 16" width="14" height="14" style="fill:#0A0812"><polygon points="1,1 13,8 1,15"/></svg>Watch Episodes</a>
+      <a href="#pod-guest" class="btn-ghost-pod">Become a Guest</a>
+      <a href="#pod-sponsor" class="btn-ghost-pod">Sponsor the Podcast</a>
+    </div>
+    <div class="ph-platforms">
+      <span class="ph-plat-label">Listen on</span>
+      <div class="ph-plat-links">
+        <a href="https://www.youtube.com/@DiscoverYouPodcast" target="_blank" rel="noopener" class="ph-plat-a"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon fill="#0A0812" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>YouTube</a>
+        <a href="https://open.spotify.com" target="_blank" rel="noopener" class="ph-plat-a"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>Spotify</a>
+        <a href="https://podcasts.apple.com" target="_blank" rel="noopener" class="ph-plat-a"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.003 0C5.374 0 0 5.374 0 12.003c0 5.193 3.299 9.625 7.99 11.288-.11-.971-.209-2.462.044-3.521.225-.96 1.514-6.418 1.514-6.418s-.386-.773-.386-1.918c0-1.797 1.044-3.14 2.341-3.14 1.104 0 1.638.829 1.638 1.823 0 1.11-.708 2.773-1.075 4.312-.306 1.287.647 2.334 1.918 2.334 2.301 0 3.871-2.947 3.871-6.443 0-2.666-1.795-4.532-4.364-4.532-2.975 0-4.715 2.23-4.715 4.537 0 .897.345 1.858.777 2.382a.312.312 0 0 1 .072.298c-.079.328-.256 1.032-.289 1.175-.046.191-.153.231-.352.139-1.317-.613-2.14-2.543-2.14-4.093 0-3.327 2.416-6.384 6.971-6.384 3.661 0 6.509 2.609 6.509 6.101 0 3.641-2.294 6.567-5.477 6.567-1.07 0-2.075-.556-2.419-1.212l-.657 2.454c-.238.917-.881 2.066-1.313 2.765.989.306 2.038.471 3.127.471C18.628 24.006 24 18.63 24 12.003 24 5.374 18.628 0 12.003 0z"/></svg>Apple Podcasts</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pod-what">
+  <div class="pod-what-wrap">
+    <div class="pod-what-img ap">
+      <img src="photos/PODCASt with herve.JPG" alt="Joel Benesha recording the Discover You Podcast">
+      <div class="pod-what-img-tag"><strong>Discover You Podcast</strong>Real stories. Real growth. Real conversations.</div>
+    </div>
+    <div>
+      <div class="pod-sec-label ap">What is Discover You?</div>
+      <h2 class="pod-what-hed ap d1">More than a podcast.<br><em>A platform for growth.</em></h2>
+      <p class="pod-what-p ap d2">The Discover You Podcast is a platform for authentic conversations that explore what it truly means to live a fulfilling life.</p>
+      <p class="pod-what-p ap d2">Through stories of challenge, growth, leadership, entrepreneurship, mental health, faith, and purpose, we help people reconnect with who they are and what matters most.</p>
+      <p class="pod-what-p ap d2">Every guest brings unique experiences, lessons, and insights that inspire others to grow, overcome obstacles, and create meaningful lives.</p>
+    </div>
+  </div>
+</section>
+
+<section id="pod-stats">
+  <div class="pod-stats-wrap">
+    <div class="pod-stats-label">Podcast Impact</div>
+    <div class="pod-stats-grid">
+      <div class="pod-stat ap"><span class="pod-stat-n">500K+</span><span class="pod-stat-l">Views &amp; Listens</span></div>
+      <div class="pod-stat ap d1"><span class="pod-stat-n">4K+</span><span class="pod-stat-l">Followers</span></div>
+      <div class="pod-stat ap d2"><span class="pod-stat-n">100+</span><span class="pod-stat-l">Conversations</span></div>
+      <div class="pod-stat ap d3"><span class="pod-stat-n">15+</span><span class="pod-stat-l">Countries Reached</span></div>
+    </div>
+    <div class="pod-platforms-row">
+      <a href="https://www.youtube.com/@DiscoverYouPodcast" target="_blank" rel="noopener" class="pod-plat-chip"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon fill="var(--void)" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>YouTube</a>
+      <a href="https://open.spotify.com" target="_blank" rel="noopener" class="pod-plat-chip"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>Spotify</a>
+      <a href="https://podcasts.apple.com" target="_blank" rel="noopener" class="pod-plat-chip"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.003 0C5.374 0 0 5.374 0 12.003c0 5.193 3.299 9.625 7.99 11.288-.11-.971-.209-2.462.044-3.521.225-.96 1.514-6.418 1.514-6.418s-.386-.773-.386-1.918c0-1.797 1.044-3.14 2.341-3.14 1.104 0 1.638.829 1.638 1.823 0 1.11-.708 2.773-1.075 4.312-.306 1.287.647 2.334 1.918 2.334 2.301 0 3.871-2.947 3.871-6.443 0-2.666-1.795-4.532-4.364-4.532-2.975 0-4.715 2.23-4.715 4.537 0 .897.345 1.858.777 2.382a.312.312 0 0 1 .072.298c-.079.328-.256 1.032-.289 1.175-.046.191-.153.231-.352.139-1.317-.613-2.14-2.543-2.14-4.093 0-3.327 2.416-6.384 6.971-6.384 3.661 0 6.509 2.609 6.509 6.101 0 3.641-2.294 6.567-5.477 6.567-1.07 0-2.075-.556-2.419-1.212l-.657 2.454c-.238.917-.881 2.066-1.313 2.765.989.306 2.038.471 3.127.471C18.628 24.006 24 18.63 24 12.003 24 5.374 18.628 0 12.003 0z"/></svg>Apple Podcasts</a>
+    </div>
+  </div>
+</section>
+
+<section id="pod-quiz">
+  <div class="pod-quiz-orb"></div>
+  <div class="pod-quiz-wrap">
+    <div>
+      <div class="pod-sec-label" style="color:var(--gold);margin-bottom:16px">Discover Your Fulfilment Score</div>
+      <h2 class="pod-quiz-hed">How fulfilled are<br>you <em>really?</em></h2>
+      <p class="pod-quiz-sub">Success doesn&rsquo;t always equal fulfilment. Many people achieve success on paper yet still feel disconnected, overwhelmed, or uncertain about what truly matters.</p>
+      <p class="pod-quiz-sub">Take our free Fulfilment Quiz and discover where you are across the seven key areas of life:</p>
+      <div class="pod-quiz-areas">
+        <div class="pod-quiz-area"><span class="pod-quiz-dot"></span>Physical Health</div>
+        <div class="pod-quiz-area"><span class="pod-quiz-dot"></span>Mental Wellbeing</div>
+        <div class="pod-quiz-area"><span class="pod-quiz-dot"></span>Emotional Health</div>
+        <div class="pod-quiz-area"><span class="pod-quiz-dot"></span>Relationships &amp; Community</div>
+        <div class="pod-quiz-area"><span class="pod-quiz-dot"></span>Family &amp; Connection</div>
+        <div class="pod-quiz-area"><span class="pod-quiz-dot"></span>Spiritual Growth &amp; Purpose</div>
+        <div class="pod-quiz-area"><span class="pod-quiz-dot"></span>Financial Wellbeing</div>
+      </div>
+      <a href="index.html#diagnostic" class="btn-gold">Take the Free Fulfilment Quiz</a>
+      <p style="font-family:'Jost',sans-serif;font-size:13px;font-weight:300;color:rgba(255,255,255,.4);margin-top:14px">Free &middot; 3 minutes &middot; Personalised results</p>
+    </div>
+    <div class="pod-wheel">
+      <svg viewBox="0 0 380 380" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="190" cy="190" r="170" fill="none" stroke="rgba(255,255,255,.04)" stroke-width="1"/>
+        <circle cx="190" cy="190" r="130" fill="none" stroke="rgba(255,255,255,.04)" stroke-width="1"/>
+        <circle cx="190" cy="190" r="90" fill="none" stroke="rgba(255,255,255,.04)" stroke-width="1"/>
+        <path d="M190 190 L190 20 A170 170 0 0 1 350 152 Z" fill="rgba(124,42,232,.45)"/>
+        <path d="M190 190 L350 152 A170 170 0 0 1 294 342 Z" fill="rgba(124,42,232,.35)"/>
+        <path d="M190 190 L294 342 A170 170 0 0 1 105 355 Z" fill="rgba(124,42,232,.55)"/>
+        <path d="M190 190 L105 355 A170 170 0 0 1 22 237 Z" fill="rgba(124,42,232,.4)"/>
+        <path d="M190 190 L22 237 A170 170 0 0 1 30 120 Z" fill="rgba(124,42,232,.6)"/>
+        <path d="M190 190 L30 120 A170 170 0 0 1 105 27 Z" fill="rgba(124,42,232,.35)"/>
+        <path d="M190 190 L105 27 A170 170 0 0 1 190 20 Z" fill="rgba(124,42,232,.5)"/>
+        <circle cx="190" cy="190" r="170" fill="none" stroke="rgba(247,195,49,.15)" stroke-width="2"/>
+        <circle cx="190" cy="190" r="44" fill="rgba(10,8,18,.9)"/>
+        <text x="190" y="185" text-anchor="middle" font-family="Playfair Display,serif" font-size="12" fill="rgba(255,255,255,.6)">Fulfilment</text>
+        <text x="190" y="202" text-anchor="middle" font-family="Playfair Display,serif" font-size="11" fill="#F7C331">Score</text>
+        <text x="190" y="12" text-anchor="middle" font-family="Jost,sans-serif" font-size="10" fill="rgba(255,255,255,.5)">Physical</text>
+        <text x="362" y="158" font-family="Jost,sans-serif" font-size="10" fill="rgba(255,255,255,.5)">Mental</text>
+        <text x="308" y="356" text-anchor="middle" font-family="Jost,sans-serif" font-size="10" fill="rgba(255,255,255,.5)">Emotional</text>
+        <text x="75" y="370" text-anchor="middle" font-family="Jost,sans-serif" font-size="10" fill="rgba(255,255,255,.5)">Relationships</text>
+        <text x="0" y="240" font-family="Jost,sans-serif" font-size="10" fill="rgba(255,255,255,.5)">Family</text>
+        <text x="8" y="112" font-family="Jost,sans-serif" font-size="10" fill="rgba(255,255,255,.5)">Spiritual</text>
+        <text x="90" y="18" text-anchor="middle" font-family="Jost,sans-serif" font-size="10" fill="rgba(255,255,255,.5)">Financial</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section id="pod-episodes">
+  <div class="pod-ep-wrap">
+    <div class="pod-ep-hdr">
+      <div><div class="pod-sec-label">Featured Episodes</div><h2 class="pod-ep-hed">Start <em>listening.</em></h2></div>
+      <a href="https://www.youtube.com/@DiscoverYouPodcast" target="_blank" rel="noopener" class="pod-ep-all">View all episodes &rarr;</a>
+    </div>
+    <div class="pod-ep-grid">
+      <div class="pod-ep-card ap">
+        <div class="pod-ep-thumb">
+          <img id="ep1-img" src="https://img.youtube.com/vi/cpIskfLExos/maxresdefault.jpg" alt="Episode on identity">
+          <div class="pod-ep-play-btn" onclick="playPodEp('ep1-frame','ep1-img')"><div class="pod-ep-play-ico"><svg viewBox="0 0 14 16"><polygon points="1,1 13,8 1,15"/></svg></div></div>
+          <iframe id="ep1-frame" src="" data-src="https://www.youtube.com/embed/cpIskfLExos?rel=0&autoplay=1&modestbranding=1" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="pod-ep-body">
+          <div class="pod-ep-tag">On identity &amp; unbecoming</div>
+          <p class="pod-ep-q">&ldquo;At some point I realised I&rsquo;d spent a decade becoming who everyone else needed me to be.&rdquo;</p>
+          <p class="pod-ep-desc">A raw conversation about the layers we build for the world &mdash; and the quiet work of returning to ourselves.</p>
+          <div class="pod-ep-links"><a href="https://youtu.be/cpIskfLExos" target="_blank" rel="noopener" class="pod-ep-btn pod-ep-btn-watch"><svg viewBox="0 0 14 16"><polygon points="1,1 13,8 1,15" fill="currentColor"/></svg>Watch</a><a href="https://open.spotify.com" target="_blank" rel="noopener" class="pod-ep-btn pod-ep-btn-listen">Listen</a></div>
+        </div>
+      </div>
+      <div class="pod-ep-card ap d1">
+        <div class="pod-ep-thumb">
+          <img id="ep2-img" src="https://img.youtube.com/vi/jqAutHM4rHM/maxresdefault.jpg" alt="Episode on anxiety">
+          <div class="pod-ep-play-btn" onclick="playPodEp('ep2-frame','ep2-img')"><div class="pod-ep-play-ico"><svg viewBox="0 0 14 16"><polygon points="1,1 13,8 1,15"/></svg></div></div>
+          <iframe id="ep2-frame" src="" data-src="https://www.youtube.com/embed/jqAutHM4rHM?rel=0&autoplay=1&modestbranding=1" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="pod-ep-body">
+          <div class="pod-ep-tag">On anxiety as a messenger</div>
+          <p class="pod-ep-q">&ldquo;My anxiety wasn&rsquo;t a problem to fix. It was my body telling me something I wasn&rsquo;t ready to hear.&rdquo;</p>
+          <p class="pod-ep-desc">What if anxiety isn&rsquo;t a malfunction? This conversation explores listening to our discomfort rather than suppressing it.</p>
+          <div class="pod-ep-links"><a href="https://youtu.be/jqAutHM4rHM" target="_blank" rel="noopener" class="pod-ep-btn pod-ep-btn-watch"><svg viewBox="0 0 14 16"><polygon points="1,1 13,8 1,15" fill="currentColor"/></svg>Watch</a><a href="https://open.spotify.com" target="_blank" rel="noopener" class="pod-ep-btn pod-ep-btn-listen">Listen</a></div>
+        </div>
+      </div>
+      <div class="pod-ep-card ap d2">
+        <div class="pod-ep-thumb">
+          <img id="ep3-img" src="https://img.youtube.com/vi/-VmqC8d6TW4/maxresdefault.jpg" alt="Episode on purpose">
+          <div class="pod-ep-play-btn" onclick="playPodEp('ep3-frame','ep3-img')"><div class="pod-ep-play-ico"><svg viewBox="0 0 14 16"><polygon points="1,1 13,8 1,15"/></svg></div></div>
+          <iframe id="ep3-frame" src="" data-src="https://www.youtube.com/embed/-VmqC8d6TW4?rel=0&autoplay=1&modestbranding=1" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="pod-ep-body">
+          <div class="pod-ep-tag">On purpose &amp; fulfilment</div>
+          <p class="pod-ep-q">&ldquo;I built the business I thought I wanted. Then I had to ask why I still felt empty standing inside it.&rdquo;</p>
+          <p class="pod-ep-desc">An honest conversation about the shadow side of ambition &mdash; and what it means to build a life that actually sustains you.</p>
+          <div class="pod-ep-links"><a href="https://youtu.be/-VmqC8d6TW4" target="_blank" rel="noopener" class="pod-ep-btn pod-ep-btn-watch"><svg viewBox="0 0 14 16"><polygon points="1,1 13,8 1,15" fill="currentColor"/></svg>Watch</a><a href="https://open.spotify.com" target="_blank" rel="noopener" class="pod-ep-btn pod-ep-btn-listen">Listen</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pod-topics">
+  <div class="pod-topics-wrap">
+    <div class="pod-sec-label" style="color:rgba(243,240,235,.35);text-align:center;margin-bottom:16px">What we explore</div>
+    <h2 class="pod-topics-hed">Topics that <em>matter.</em></h2>
+    <div class="pod-topics-grid">
+      <div class="pod-topic ap"><div class="pod-topic-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M6 20c0-2 2.7-3.5 6-3.5s6 1.5 6 3.5"/></svg></div><div class="pod-topic-name">Personal Growth</div><p class="pod-topic-desc">Identity, confidence, mindset, and fulfilment &mdash; the inner work that changes everything.</p></div>
+      <div class="pod-topic ap d1"><div class="pod-topic-ico"><svg viewBox="0 0 24 24"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg></div><div class="pod-topic-name">Mental Health</div><p class="pod-topic-desc">Resilience, wellbeing, anxiety, and overcoming adversity with honesty and grace.</p></div>
+      <div class="pod-topic ap d2"><div class="pod-topic-ico"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div class="pod-topic-name">Business &amp; Leadership</div><p class="pod-topic-desc">Entrepreneurship, leadership, and the real story behind building something meaningful.</p></div>
+      <div class="pod-topic ap d3"><div class="pod-topic-ico"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><div class="pod-topic-name">Faith &amp; Purpose</div><p class="pod-topic-desc">Spiritual growth, meaning, values, and the questions that guide a life well lived.</p></div>
+      <div class="pod-topic ap d4"><div class="pod-topic-ico"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div class="pod-topic-name">Community Stories</div><p class="pod-topic-desc">Changemakers, innovators, and local heroes whose journeys inspire entire communities.</p></div>
+      <div class="pod-topic ap d5"><div class="pod-topic-ico"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div><div class="pod-topic-name">Family &amp; Relationships</div><p class="pod-topic-desc">The depth, quality, and honesty of our connections &mdash; and what it takes to nurture them.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="pod-host">
+  <div class="pod-host-wrap">
+    <div class="pod-host-img-wrap ap">
+      <div class="pod-host-img"><img src="photos/joel-award.jpg" alt="Joel Benesha &mdash; Host of Discover You Podcast"></div>
+      <div class="pod-host-badge">
+        <div class="pod-host-badge-name">Joel Benesha</div>
+        <div style="font-family:'Jost',sans-serif;font-size:12px;font-weight:300;color:rgba(243,240,235,.55);margin-top:2px">Host &amp; Founder</div>
+        <div class="pod-host-badge-chips"><span class="pod-host-chip">Engineer</span><span class="pod-host-chip">NT Young Achiever</span><span class="pod-host-chip">Coach</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="pod-host-label ap">Meet the Host</div>
+      <h2 class="pod-host-hed ap d1">Joel <em>Benesha</em></h2>
+      <p class="pod-host-bio ap d2">Joel Benesha is an entrepreneur, speaker, coach, software engineer, and founder of Reality Creation Centre. Through the Discover You Podcast, Joel creates meaningful conversations that help people uncover purpose, fulfilment, resilience, and personal growth.</p>
+      <p class="pod-host-bio ap d2">His mission is simple: give every person access to the conversations, tools, and community they need to build a life that truly means something.</p>
+      <div class="pod-host-highlights ap d3">
+        <div class="pod-host-hl"><div class="pod-host-hl-ico"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>Founder of Reality Creation Centre</div>
+        <div class="pod-host-hl"><div class="pod-host-hl-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg></div>Host of Discover You Podcast &mdash; 500K+ Views</div>
+        <div class="pod-host-hl"><div class="pod-host-hl-ico"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>2&times; NT Young Achiever Award Winner &mdash; 2020 &amp; 2024</div>
+        <div class="pod-host-hl"><div class="pod-host-hl-ico"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>Software Engineer (Honours)</div>
+        <div class="pod-host-hl"><div class="pod-host-hl-ico"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>Speaker &amp; Community Advocate</div>
+      </div>
+      <div class="pod-host-socials ap d4">
+        <a href="https://www.instagram.com/joel.benesha/" target="_blank" rel="noopener" class="pod-host-soc"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4" fill="rgba(26,24,20,.5)"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+        <a href="https://www.youtube.com/@joelbenesha9" target="_blank" rel="noopener" class="pod-host-soc"><svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="rgba(26,24,20,.5)"/></svg></a>
+        <a href="https://www.instagram.com/discoveryou_podcast/" target="_blank" rel="noopener" class="pod-host-soc"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4" fill="rgba(26,24,20,.5)"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pod-guest">
+  <div class="pod-guest-orb"></div>
+  <div class="pod-guest-wrap">
+    <div>
+      <div class="pod-sec-label" style="color:var(--gold)">Share Your Story</div>
+      <h2 class="pod-guest-hed">Do you have a story<br><em>worth sharing?</em></h2>
+      <p class="pod-guest-p">We&rsquo;re looking for people with real stories, lived experience, and a genuine desire to impact others. You don&rsquo;t need a huge following &mdash; you need a story worth hearing.</p>
+      <div class="pod-guest-types">
+        <div class="pod-guest-type"><span class="pod-guest-type-dot"></span>Business Owners</div>
+        <div class="pod-guest-type"><span class="pod-guest-type-dot"></span>Entrepreneurs</div>
+        <div class="pod-guest-type"><span class="pod-guest-type-dot"></span>Community Leaders</div>
+        <div class="pod-guest-type"><span class="pod-guest-type-dot"></span>Athletes</div>
+        <div class="pod-guest-type"><span class="pod-guest-type-dot"></span>Creators</div>
+        <div class="pod-guest-type"><span class="pod-guest-type-dot"></span>Professionals</div>
+        <div class="pod-guest-type"><span class="pod-guest-type-dot"></span>Coaches &amp; Mentors</div>
+        <div class="pod-guest-type"><span class="pod-guest-type-dot"></span>Inspiring Life Journeys</div>
+      </div>
+    </div>
+    <form class="pod-form" onsubmit="handleGuestForm(event)">
+      <div class="pod-form-row">
+        <input class="pod-input" type="text" placeholder="Your Name" required>
+        <input class="pod-input" type="email" placeholder="Email Address" required>
+      </div>
+      <div class="pod-form-row">
+        <input class="pod-input" type="tel" placeholder="Phone Number">
+        <input class="pod-input" type="text" placeholder="Business / Organisation">
+      </div>
+      <input class="pod-input" type="url" placeholder="Website (optional)">
+      <input class="pod-input" type="text" placeholder="Instagram / Social Media Handle">
+      <textarea class="pod-input pod-textarea" placeholder="Tell us your story &mdash; what have you been through, built, or overcome?" rows="4"></textarea>
+      <textarea class="pod-input pod-textarea" placeholder="Why would you make a great guest on Discover You?" rows="3"></textarea>
+      <button type="submit" class="btn-gold" style="border:none;cursor:pointer;justify-content:center;padding:16px 32px;font-size:14px">Apply to Be a Guest &rarr;</button>
+      <p class="pod-form-note">We read every application and respond within 5&ndash;7 business days.</p>
+    </form>
+  </div>
+</section>
+
+<section id="pod-sponsor">
+  <div class="pod-sponsor-wrap">
+    <div>
+      <div class="pod-sec-label ap">Sponsorship &amp; Partnerships</div>
+      <h2 class="pod-sponsor-hed ap d1">Partner with<br>the <em>Podcast</em></h2>
+      <p class="pod-sponsor-p ap d2">The Discover You Podcast offers businesses and organisations the opportunity to connect with an engaged, values-driven audience through authentic storytelling.</p>
+      <div class="pod-sponsor-ops ap d3">
+        <div class="pod-sponsor-op"><div class="pod-sponsor-op-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg></div><span class="pod-sponsor-op-text">Episode Sponsorships</span></div>
+        <div class="pod-sponsor-op"><div class="pod-sponsor-op-ico"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div><span class="pod-sponsor-op-text">Business Spotlight Episodes</span></div>
+        <div class="pod-sponsor-op"><div class="pod-sponsor-op-ico"><svg viewBox="0 0 24 24"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg></div><span class="pod-sponsor-op-text">Brand Exposure &amp; Content Packages</span></div>
+        <div class="pod-sponsor-op"><div class="pod-sponsor-op-ico"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><span class="pod-sponsor-op-text">Event &amp; Community Partnerships</span></div>
+      </div>
+    </div>
+    <div class="pod-sponsor-form-wrap ap d2">
+      <div class="pod-sponsor-form-hed">Request Sponsorship Info</div>
+      <form style="display:flex;flex-direction:column;gap:12px" onsubmit="handleSponsorForm(event)">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+          <input class="pod-input-light" type="text" placeholder="Name" required>
+          <input class="pod-input-light" type="text" placeholder="Business Name" required>
+        </div>
+        <input class="pod-input-light" type="email" placeholder="Email Address" required>
+        <input class="pod-input-light" type="url" placeholder="Website">
+        <textarea class="pod-input-light pod-textarea" placeholder="Tell us about your brand..." rows="4"></textarea>
+        <button type="submit" class="btn btn-fill" style="border:none;cursor:pointer;text-align:center;width:100%">Send Enquiry &rarr;</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="pod-testimonials">
+  <div class="pod-test-wrap">
+    <div class="pod-sec-label" style="color:rgba(243,240,235,.35);text-align:center;margin-bottom:16px">Community Voice</div>
+    <h2 class="pod-test-hed">What people are <em>saying.</em></h2>
+    <div class="pod-test-grid">
+      <div class="pod-test-card ap"><p class="pod-test-quote">&ldquo;Discover You is one of the most authentic podcasts I&rsquo;ve come across. Joel creates a space where real conversations happen &mdash; the kind that stay with you long after the episode ends.&rdquo;</p><div class="pod-test-person"><div class="pod-test-avatar"><svg viewBox="0 0 24 24" width="22"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="rgba(255,255,255,.4)" fill="none" stroke-width="1.5"/><circle cx="12" cy="7" r="4" stroke="rgba(255,255,255,.4)" fill="none" stroke-width="1.5"/></svg></div><div><div class="pod-test-name">Alan Shyju</div><div class="pod-test-role">Podcast Guest &amp; Entrepreneur</div></div></div></div>
+      <div class="pod-test-card ap d1"><p class="pod-test-quote">&ldquo;Joel has a gift for drawing out the parts of a story that actually matter. I left the interview feeling seen &mdash; and I&rsquo;ve heard from listeners who say the episode changed how they see themselves.&rdquo;</p><div class="pod-test-person"><div class="pod-test-avatar"><svg viewBox="0 0 24 24" width="22"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="rgba(255,255,255,.4)" fill="none" stroke-width="1.5"/><circle cx="12" cy="7" r="4" stroke="rgba(255,255,255,.4)" fill="none" stroke-width="1.5"/></svg></div><div><div class="pod-test-name">Alwin Lal</div><div class="pod-test-role">Community Leader</div></div></div></div>
+      <div class="pod-test-card ap d2"><p class="pod-test-quote">&ldquo;I discovered Discover You at a really low point. The conversations on this podcast reminded me that my story isn&rsquo;t over &mdash; it&rsquo;s just beginning a new chapter.&rdquo;</p><div class="pod-test-person"><div class="pod-test-avatar"><svg viewBox="0 0 24 24" width="22"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="rgba(255,255,255,.4)" fill="none" stroke-width="1.5"/><circle cx="12" cy="7" r="4" stroke="rgba(255,255,255,.4)" fill="none" stroke-width="1.5"/></svg></div><div><div class="pod-test-name">Grace Tuiono</div><div class="pod-test-role">Listener &amp; Community Member</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="pod-cta">
+  <div class="pod-cta-orb-l"></div><div class="pod-cta-orb-r"></div>
+  <div class="pod-cta-inner">
+    <div class="pod-sec-label" style="color:rgba(243,240,235,.3);text-align:center;margin-bottom:24px">Join the Movement</div>
+    <h2 class="pod-cta-hed">Everyone has<br>a <em>story.</em></h2>
+    <p class="pod-cta-lines">
+      <span>Some stories inspire.</span><span>Some stories heal.</span>
+      <span>Some stories change lives.</span>
+      <span style="color:rgba(255,255,255,.8);font-weight:400">Discover yours.</span>
+    </p>
+    <div class="pod-cta-acts">
+      <a href="#pod-episodes" class="btn-gold">Watch the Podcast</a>
+      <a href="index.html#diagnostic" class="btn-ghost-pod">Take the Fulfilment Quiz</a>
+      <a href="#pod-guest" class="btn-ghost-pod">Become a Guest</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="ft-top">
+    <div class="ft-brand">
+      <div class="ft-brand-name"><img src="photos/Logo real.png" alt="RCC" style="width:42px;height:42px;border-radius:8px;object-fit:contain">Reality Creation Centre</div>
+      <p class="ft-brand-tag">A community and transformation platform helping people build all seven dimensions of a fulfilled life. Free to join. Open to everyone.</p>
+      <div class="ft-social">
+        <a href="https://www.instagram.com/discoveryou_podcast/" target="_blank" rel="noopener" class="ft-soc-a"><svg viewBox="0 0 24 24" fill="rgba(243,240,235,.45)"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4" fill="var(--void)"/><circle cx="17.5" cy="6.5" r="1" fill="rgba(243,240,235,.45)"/></svg></a>
+        <a href="https://www.youtube.com/@DiscoverYouPodcast" target="_blank" rel="noopener" class="ft-soc-a"><svg viewBox="0 0 24 24" fill="rgba(243,240,235,.45)"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="var(--void)"/></svg></a>
+        <a href="https://www.instagram.com/joel.benesha/" target="_blank" rel="noopener" class="ft-soc-a"><svg viewBox="0 0 24 24" fill="rgba(243,240,235,.45)"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4" fill="var(--void)"/><circle cx="17.5" cy="6.5" r="1" fill="rgba(243,240,235,.45)"/></svg></a>
+        <a href="https://www.youtube.com/@joelbenesha9" target="_blank" rel="noopener" class="ft-soc-a"><svg viewBox="0 0 24 24" fill="rgba(243,240,235,.45)"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="var(--void)"/></svg></a>
+      </div>
+    </div>
+    <div class="ft-nav-col">
+      <div class="ft-nav-label">Navigate</div>
+      <ul class="ft-nav-links">
+        <li><a href="index.html#what">Community</a></li>
+        <li><a href="podcast.html">Podcast</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="coaching.html">Coaching</a></li>
+        <li><a href="speaking.html">Speaking</a></li>
+        <li><a href="partner.html">Partner</a></li>
+        <li><a href="about.html">About Joel</a></li>
+      </ul>
+    </div>
+    <div class="ft-cta-col">
+      <div class="ft-cta-label">Join the Centre</div>
+      <p class="ft-cta-hed">&ldquo;The gap between where you are and where you sense you could be &mdash; that gap has a name.&rdquo;</p>
+      <p class="ft-cta-sub">Free to join. Open to everyone. No background or experience required.</p>
+      <a href="https://www.skool.com/reality-creation-collective-4161/about" target="_blank" rel="noopener" class="btn btn-fill" style="text-align:center">Join Free Today</a>
+    </div>
+  </div>
+  <div class="ft-bottom">
+    <span class="ft-copy-new">&copy; 2025 Reality Creation Centre &middot; Joel Benesha &middot; Brisbane, QLD, Australia</span>
+    <ul class="ft-bottom-links"><li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li><li><a href="partner.html">Partner with Us</a></li></ul>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+<script>
+function playPodEp(fId,iId){var f=document.getElementById(fId),i=document.getElementById(iId);f.src=f.dataset.src;f.style.display='block';i.style.display='none';i.nextElementSibling.style.display='none'}
+function handleGuestForm(e){e.preventDefault();var b=e.target.querySelector('button[type=submit]');b.textContent='Application Sent';b.style.background='#2d8a4e';b.disabled=true}
+function handleSponsorForm(e){e.preventDefault();var b=e.target.querySelector('button[type=submit]');b.textContent='Enquiry Sent';b.disabled=true}
+</script>
+</body>
+</html>

@@ -1,0 +1,593 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Join the Reality Creation Centre community — a growing movement of people committed to fulfilment, personal growth, and meaningful connection. Free to join.">
+<title>Community — Reality Creation Centre</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+:root{--gold:#F7C331;--purple:#7C2AE8;--void:#08070F;--cream:#F3F0EB;--stone:rgba(26,24,20,.55)}
+
+/* ── HERO ── */
+#comm-hero{min-height:100vh;min-height:100svh;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;background:var(--void)}
+.ch-bg{position:absolute;inset:0;background:url('photos/community-forum.jpg') center 30%/cover no-repeat;opacity:.35;transform:scale(1.04);transition:transform 12s ease}
+.ch-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,7,15,.7) 0%,rgba(8,7,15,.4) 40%,rgba(8,7,15,.75) 100%)}
+.ch-inner{position:relative;z-index:2;text-align:center;max-width:900px;margin:0 auto;padding:0 40px}
+.ch-badge{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(247,195,49,.3);border-radius:40px;padding:9px 22px;margin-bottom:36px;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+.ch-badge-dot{width:7px;height:7px;border-radius:50%;background:var(--gold);animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
+.ch-h1{font-family:'Playfair Display',serif;font-size:clamp(48px,8vw,100px);font-weight:300;line-height:1.02;color:#fff;margin:0 0 28px;letter-spacing:-.025em}
+.ch-h1 em{font-style:italic;color:rgba(243,240,235,.35)}
+.ch-sub{font-family:'Jost',sans-serif;font-size:clamp(15px,2vw,19px);font-weight:300;line-height:1.75;color:rgba(243,240,235,.65);max-width:620px;margin:0 auto 48px}
+.ch-acts{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn-join{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:#08070F;border:none;border-radius:40px;padding:17px 38px;font-family:'Jost',sans-serif;font-size:14px;font-weight:500;letter-spacing:.04em;cursor:pointer;text-decoration:none;transition:opacity .2s,transform .2s}
+.btn-join:hover{opacity:.88;transform:translateY(-2px)}
+.btn-ghost-comm{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.75);border-radius:40px;padding:16px 30px;font-family:'Jost',sans-serif;font-size:14px;font-weight:300;text-decoration:none;transition:border-color .2s,color .2s;background:transparent}
+.btn-ghost-comm:hover{border-color:rgba(255,255,255,.6);color:#fff}
+.ch-scroll{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.25)}
+.ch-scroll-line{width:1px;height:36px;background:linear-gradient(to bottom,rgba(255,255,255,.25),transparent)}
+
+/* ── PROOF STRIP ── */
+#comm-proof{background:var(--cream);border-bottom:1px solid rgba(0,0,0,.08)}
+.proof-inner{max-width:1100px;margin:0 auto;padding:52px 56px;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap}
+.proof-stat{text-align:center;flex:1;min-width:120px}
+.proof-n{font-family:'Playfair Display',serif;font-size:clamp(36px,4vw,56px);font-weight:300;color:var(--void);line-height:1}
+.proof-l{font-family:'Jost',sans-serif;font-size:11px;font-weight:300;letter-spacing:.18em;text-transform:uppercase;color:rgba(26,24,20,.45);margin-top:8px}
+.proof-div{width:1px;height:52px;background:rgba(0,0,0,.1);flex-shrink:0}
+
+/* ── MISSION ── */
+#comm-mission{background:var(--void);border-bottom:1px solid rgba(255,255,255,.05)}
+.mission-inner{max-width:1100px;margin:0 auto;padding:100px 56px;display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center}
+.mission-label{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:rgba(160,100,220,.85);margin-bottom:18px;display:flex;align-items:center;gap:12px}
+.mission-label span{width:28px;height:1px;background:rgba(75,0,130,.45);display:inline-block}
+.mission-h2{font-family:'Playfair Display',serif;font-size:clamp(30px,4vw,52px);font-weight:300;line-height:1.1;color:#F3F0EB;margin:0 0 28px}
+.mission-h2 em{font-style:italic;color:rgba(243,240,235,.3)}
+.mission-p{font-family:'Jost',sans-serif;font-size:16px;font-weight:300;line-height:1.88;color:rgba(243,240,235,.55);margin:0 0 18px}
+.mission-right{display:flex;flex-direction:column;gap:20px}
+.mission-point{display:flex;align-items:flex-start;gap:16px;padding:22px 24px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:14px}
+.mission-point-ico{width:40px;height:40px;border-radius:10px;background:rgba(247,195,49,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.mission-point-ico svg{width:18px;height:18px;stroke:var(--gold);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.mission-point-text strong{display:block;font-family:'Jost',sans-serif;font-size:14px;font-weight:400;color:#F3F0EB;margin-bottom:4px}
+.mission-point-text span{font-family:'Jost',sans-serif;font-size:13px;font-weight:300;color:rgba(243,240,235,.45);line-height:1.6}
+
+/* ── THREE PILLARS ── */
+#comm-pillars{background:linear-gradient(135deg,#0D0520 0%,#1A0840 50%,#08070F 100%);border-bottom:1px solid rgba(255,255,255,.05);position:relative;overflow:hidden}
+.pillars-orb{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(124,42,232,.15) 0%,transparent 70%);pointer-events:none}
+.pillars-inner{max-width:1100px;margin:0 auto;padding:100px 56px;position:relative;z-index:1}
+.pillars-hdr{text-align:center;margin-bottom:64px}
+.pillars-label{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:rgba(160,100,220,.85);margin-bottom:16px}
+.pillars-h2{font-family:'Playfair Display',serif;font-size:clamp(30px,4vw,52px);font-weight:300;color:#F3F0EB;margin:0 0 14px}
+.pillars-h2 em{font-style:italic;color:rgba(243,240,235,.3)}
+.pillars-sub{font-family:'Jost',sans-serif;font-size:16px;font-weight:300;color:rgba(243,240,235,.45);max-width:520px;margin:0 auto;line-height:1.75}
+.pillars-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.pillar-card{padding:48px 40px;border:1px solid rgba(255,255,255,.07);transition:border-color .3s,background .3s}
+.pillar-card:first-child{border-radius:20px 0 0 20px}
+.pillar-card:last-child{border-radius:0 20px 20px 0}
+.pillar-card:hover{border-color:rgba(247,195,49,.2);background:rgba(247,195,49,.03)}
+.pillar-card.featured{border-color:rgba(124,42,232,.3);background:rgba(124,42,232,.06)}
+.pillar-card.featured:hover{border-color:rgba(124,42,232,.5)}
+.pillar-ico{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:28px}
+.pillar-ico svg{width:24px;height:24px;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.pillar-num{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;margin-bottom:14px}
+.pillar-name{font-family:'Playfair Display',serif;font-size:28px;font-weight:300;color:#F3F0EB;margin-bottom:16px}
+.pillar-desc{font-family:'Jost',sans-serif;font-size:14px;font-weight:300;color:rgba(243,240,235,.5);line-height:1.8;margin:0 0 28px}
+.pillar-items{display:flex;flex-direction:column;gap:12px}
+.pillar-item{display:flex;align-items:center;gap:12px;font-family:'Jost',sans-serif;font-size:13px;font-weight:300;color:rgba(243,240,235,.65)}
+.pillar-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+
+/* ── INSIDE SKOOL ── */
+#comm-inside{background:var(--cream);border-bottom:1px solid rgba(0,0,0,.08)}
+.inside-inner{max-width:1100px;margin:0 auto;padding:100px 56px}
+.inside-hdr{margin-bottom:64px}
+.inside-label{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--purple);margin-bottom:16px}
+.inside-h2{font-family:'Playfair Display',serif;font-size:clamp(30px,4vw,50px);font-weight:300;line-height:1.1;color:var(--void);margin:0 0 16px}
+.inside-h2 em{font-style:italic;color:rgba(26,24,20,.35)}
+.inside-sub{font-family:'Jost',sans-serif;font-size:16px;font-weight:300;color:rgba(26,24,20,.55);max-width:520px;line-height:1.75;margin:0}
+.inside-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.inside-card{background:#fff;border:1px solid rgba(0,0,0,.07);border-radius:18px;padding:36px 32px;transition:border-color .3s,box-shadow .3s}
+.inside-card:hover{border-color:rgba(124,42,232,.2);box-shadow:0 10px 40px rgba(124,42,232,.07)}
+.inside-card-tag{font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(124,42,232,.7);background:rgba(124,42,232,.07);border-radius:40px;padding:5px 14px;display:inline-block;margin-bottom:18px}
+.inside-card-title{font-family:'Playfair Display',serif;font-size:20px;font-weight:400;color:var(--void);margin:0 0 12px}
+.inside-card-desc{font-family:'Jost',sans-serif;font-size:14px;font-weight:300;color:rgba(26,24,20,.55);line-height:1.75;margin:0 0 22px}
+.inside-card-items{display:flex;flex-direction:column;gap:8px}
+.inside-card-item{display:flex;align-items:center;gap:10px;font-family:'Jost',sans-serif;font-size:13px;font-weight:300;color:rgba(26,24,20,.65)}
+.inside-card-item-dot{width:5px;height:5px;border-radius:50%;background:var(--purple);flex-shrink:0}
+
+/* ── WHO IT'S FOR ── */
+#comm-who{background:var(--void);border-bottom:1px solid rgba(255,255,255,.05)}
+.who-inner{max-width:1100px;margin:0 auto;padding:100px 56px}
+.who-hdr{text-align:center;margin-bottom:64px}
+.who-label{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:rgba(160,100,220,.85);margin-bottom:16px}
+.who-h2{font-family:'Playfair Display',serif;font-size:clamp(30px,4vw,50px);font-weight:300;color:#F3F0EB;margin:0}
+.who-h2 em{font-style:italic;color:rgba(243,240,235,.3)}
+.who-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.who-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:18px;padding:32px 26px;transition:border-color .3s,background .3s}
+.who-card:hover{border-color:rgba(247,195,49,.25);background:rgba(247,195,49,.04)}
+.who-ico{width:48px;height:48px;border-radius:12px;background:rgba(247,195,49,.1);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.who-ico svg{width:22px;height:22px;stroke:var(--gold);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.who-name{font-family:'Playfair Display',serif;font-size:17px;font-weight:400;color:#F3F0EB;margin:0 0 10px}
+.who-desc{font-family:'Jost',sans-serif;font-size:13px;font-weight:300;color:rgba(243,240,235,.45);line-height:1.7;margin:0}
+
+/* ── COMMUNITY MOMENTS ── */
+#comm-moments{background:var(--cream);border-bottom:1px solid rgba(0,0,0,.08);overflow:hidden}
+.moments-inner{max-width:1100px;margin:0 auto;padding:100px 56px 64px}
+.moments-hdr{margin-bottom:48px}
+.moments-label{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--purple);margin-bottom:14px}
+.moments-h2{font-family:'Playfair Display',serif;font-size:clamp(28px,3.8vw,48px);font-weight:300;color:var(--void);margin:0}
+.moments-h2 em{font-style:italic;color:rgba(26,24,20,.35)}
+.moments-grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:auto auto;gap:12px}
+.moment-item{border-radius:16px;overflow:hidden;position:relative;background:#1a1820}
+.moment-item:first-child{grid-row:1/3}
+.moment-item img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform .6s}
+.moment-item:hover img{transform:scale(1.04)}
+.moment-item-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,7,15,.7) 0%,transparent 50%);opacity:0;transition:opacity .3s}
+.moment-item:hover .moment-item-overlay{opacity:1}
+.moments-quote{margin-top:48px;padding:40px 48px;background:linear-gradient(135deg,rgba(124,42,232,.06),rgba(247,195,49,.04));border:1px solid rgba(124,42,232,.15);border-radius:18px;text-align:center}
+.moments-quote-text{font-family:'Playfair Display',serif;font-size:clamp(18px,2.5vw,26px);font-weight:300;font-style:italic;color:var(--void);line-height:1.55;margin:0 0 16px;max-width:680px;margin-left:auto;margin-right:auto}
+.moments-quote-attr{font-family:'Jost',sans-serif;font-size:12px;font-weight:300;letter-spacing:.12em;text-transform:uppercase;color:rgba(26,24,20,.4)}
+
+/* ── FINAL CTA ── */
+#comm-cta{background:var(--void);position:relative;overflow:hidden}
+.cta-bg{position:absolute;inset:0;background:url('photos/community-panel.jpg') center/cover no-repeat;opacity:.15}
+.cta-grad{position:absolute;inset:0;background:linear-gradient(135deg,rgba(8,7,15,.96) 0%,rgba(8,7,15,.75) 100%)}
+.cta-orb-l{position:absolute;left:-200px;top:50%;transform:translateY(-50%);width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(124,42,232,.25) 0%,transparent 70%);pointer-events:none}
+.cta-orb-r{position:absolute;right:-200px;top:50%;transform:translateY(-50%);width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(247,195,49,.12) 0%,transparent 70%);pointer-events:none}
+.cta-inner{position:relative;z-index:1;max-width:760px;margin:0 auto;padding:130px 40px;text-align:center}
+.cta-label{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:rgba(243,240,235,.3);margin-bottom:24px}
+.cta-h2{font-family:'Playfair Display',serif;font-size:clamp(44px,7vw,84px);font-weight:300;line-height:1.02;color:#fff;margin:0 0 22px}
+.cta-h2 em{font-style:italic;color:var(--gold)}
+.cta-p{font-family:'Jost',sans-serif;font-size:17px;font-weight:300;line-height:1.75;color:rgba(255,255,255,.5);max-width:540px;margin:0 auto 16px}
+.cta-free{font-family:'Jost',sans-serif;font-size:13px;font-weight:300;color:rgba(255,255,255,.28);margin:0 auto 52px;letter-spacing:.05em}
+.cta-acts{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.cta-trust{display:flex;align-items:center;justify-content:center;gap:32px;margin-top:36px;flex-wrap:wrap}
+.cta-trust-item{display:flex;align-items:center;gap:8px;font-family:'Jost',sans-serif;font-size:12px;font-weight:300;color:rgba(243,240,235,.3)}
+.cta-trust-item svg{width:14px;height:14px;stroke:rgba(243,240,235,.3);fill:none;stroke-width:1.8}
+
+/* ── RESPONSIVE ── */
+@media(max-width:960px){
+  .mission-inner{grid-template-columns:1fr;gap:52px}
+  .pillars-grid{grid-template-columns:1fr}
+  .pillar-card:first-child,.pillar-card:last-child{border-radius:0}
+  .pillars-grid .pillar-card:first-child{border-radius:16px 16px 0 0}
+  .pillars-grid .pillar-card:last-child{border-radius:0 0 16px 16px}
+  .inside-grid{grid-template-columns:1fr 1fr}
+  .who-grid{grid-template-columns:1fr 1fr}
+  .moments-grid{grid-template-columns:1fr 1fr}
+  .moment-item:first-child{grid-row:auto}
+  .proof-div{display:none}
+}
+@media(max-width:640px){
+  .ch-inner,.mission-inner,.pillars-inner,.inside-inner,.who-inner,.moments-inner,.cta-inner{padding-left:24px;padding-right:24px}
+  .proof-inner{padding:40px 24px;flex-direction:column;gap:28px}
+  .inside-grid,.who-grid{grid-template-columns:1fr}
+  .moments-grid{grid-template-columns:1fr}
+  .cta-h2{font-size:clamp(40px,12vw,60px)}
+}
+</style>
+</head>
+<body>
+<div id="cur"></div>
+
+<nav id="nav" class="dk">
+  <a href="index.html" class="nlogo">
+    <img src="photos/Logo real.png" alt="Reality Creation Centre" class="nlogo-img" style="width:44px;height:44px;border-radius:8px;object-fit:contain;flex-shrink:0">
+    <div><span class="nlogo-t">Reality Creation</span><span class="nlogo-s">Centre</span></div>
+  </a>
+  <ul class="nlinks">
+    <li><a href="index.html"        class="nl">Home</a></li>
+    <li><a href="coaching.html"     class="nl">Fulfilment</a></li>
+    <li><a href="podcast.html"      class="nl">Podcast</a></li>
+    <li><a href="media.html"        class="nl">Media &amp; Storytelling</a></li>
+    <li><a href="community.html"    class="nl active">Community</a></li>
+    <li><a href="index.html#diagnostic" class="nl ncta">Take Quiz</a></li>
+  </ul>
+  <div class="nham"><span></span><span></span><span></span></div>
+</nav>
+
+
+<!-- ══ 01 — HERO ══ -->
+<section id="comm-hero">
+  <div class="ch-bg"></div>
+  <div class="ch-overlay"></div>
+
+  <div class="ch-inner">
+    <div class="ch-badge ap"><span class="ch-badge-dot"></span>Reality Creation Centre · Community</div>
+    <h1 class="ch-h1 ap d1">
+      You Weren't Meant<br>
+      <em>To Do Life</em><br>
+      Alone.
+    </h1>
+    <p class="ch-sub ap d2">A free community of people committed to growth, connection, and living with greater purpose. Everything you need — courses, resources, and real human connection — in one place.</p>
+    <div class="ch-acts ap d3">
+      <a href="https://www.skool.com/reality-creation-collective-4161/about" target="_blank" rel="noopener" class="btn-join">Join The Community — Free →</a>
+      <a href="#comm-pillars" class="btn-ghost-comm">See What's Inside</a>
+    </div>
+  </div>
+
+  <div class="ch-scroll ap"><div class="ch-scroll-line"></div><span>Scroll</span></div>
+</section>
+
+
+<!-- ══ 02 — PROOF STRIP ══ -->
+<section id="comm-proof">
+  <div class="proof-inner">
+    <div class="proof-stat ap">
+      <div class="proof-n">50K+</div>
+      <div class="proof-l">Global Listeners</div>
+    </div>
+    <div class="proof-div"></div>
+    <div class="proof-stat ap d1">
+      <div class="proof-n">150+</div>
+      <div class="proof-l">At One Event</div>
+    </div>
+    <div class="proof-div"></div>
+    <div class="proof-stat ap d2">
+      <div class="proof-n">15+</div>
+      <div class="proof-l">Countries Reached</div>
+    </div>
+    <div class="proof-div"></div>
+    <div class="proof-stat ap d3">
+      <div class="proof-n">200+</div>
+      <div class="proof-l">Podcast Episodes</div>
+    </div>
+    <div class="proof-div"></div>
+    <div class="proof-stat ap d4">
+      <div class="proof-n">Free</div>
+      <div class="proof-l">Always Will Be</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ 03 — MISSION ══ -->
+<section id="comm-mission">
+  <div class="mission-inner">
+    <div>
+      <div class="mission-label ap"><span></span>Why we exist</div>
+      <h2 class="mission-h2 ap d1">This isn't just<br>a group chat.<br><em>It's a movement.</em></h2>
+      <p class="mission-p ap d2">Most people are surrounded by others yet feel completely alone in their journey. They don't have anyone to talk to about the things that actually matter — purpose, growth, what it means to live fully.</p>
+      <p class="mission-p ap d2">Reality Creation Centre was built to change that. A community where real conversations happen. Where people actually show up for each other. Where growth is the norm, not the exception.</p>
+    </div>
+    <div class="mission-right">
+      <div class="mission-point ap d2">
+        <div class="mission-point-ico">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <div class="mission-point-text">
+          <strong>Real People. Real Conversations.</strong>
+          <span>Not a mailing list. Not a feed. A place where people genuinely connect around what matters.</span>
+        </div>
+      </div>
+      <div class="mission-point ap d3">
+        <div class="mission-point-ico">
+          <svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        </div>
+        <div class="mission-point-text">
+          <strong>Learn. Grow. Apply.</strong>
+          <span>Courses, workshops, and events designed to create real change — not just inspiration that fades by Monday.</span>
+        </div>
+      </div>
+      <div class="mission-point ap d4">
+        <div class="mission-point-ico">
+          <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+        </div>
+        <div class="mission-point-text">
+          <strong>Resources On Demand.</strong>
+          <span>Ebooks, worksheets, and tools available the moment you need them — no upsell, no paywall.</span>
+        </div>
+      </div>
+      <div class="mission-point ap d5">
+        <div class="mission-point-ico">
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <div class="mission-point-text">
+          <strong>Accountability That Actually Works.</strong>
+          <span>People who check in on you. Discussions that hold you to what you said you'd do.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ 04 — THREE PILLARS ══ -->
+<section id="comm-pillars">
+  <div class="pillars-orb"></div>
+  <div class="pillars-inner">
+    <div class="pillars-hdr">
+      <div class="pillars-label ap">Three pillars</div>
+      <h2 class="pillars-h2 ap d1">Everything Inside The <em>Community.</em></h2>
+      <p class="pillars-sub ap d2">One platform. Three pillars. Everything you need to grow, learn, and connect — completely free.</p>
+    </div>
+
+    <div class="pillars-grid">
+
+      <!-- COURSES -->
+      <div class="pillar-card ap">
+        <div class="pillar-ico" style="background:rgba(247,195,49,.1)">
+          <svg viewBox="0 0 24 24" stroke="#F7C331"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        </div>
+        <div class="pillar-num" style="color:rgba(247,195,49,.7)">Pillar 01</div>
+        <div class="pillar-name">Courses</div>
+        <p class="pillar-desc">Structured programs to help you grow across all seven areas of life. Go at your own pace. Revisit any time.</p>
+        <div class="pillar-items">
+          <div class="pillar-item"><div class="pillar-dot" style="background:#F7C331"></div>Events</div>
+          <div class="pillar-item"><div class="pillar-dot" style="background:#F7C331"></div>Workshops</div>
+          <div class="pillar-item"><div class="pillar-dot" style="background:#F7C331"></div>Recorded Training</div>
+          <div class="pillar-item"><div class="pillar-dot" style="background:#F7C331"></div>Guest Speaker Sessions</div>
+        </div>
+      </div>
+
+      <!-- RESOURCES -->
+      <div class="pillar-card featured ap d1">
+        <div style="position:absolute;top:-1px;left:50%;transform:translateX(-50%);font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:rgba(124,42,232,.8);background:linear-gradient(135deg,#0D0520,#1A0840);border:1px solid rgba(124,42,232,.3);border-radius:0 0 10px 10px;padding:5px 18px;white-space:nowrap">Most Used</div>
+        <div class="pillar-ico" style="background:rgba(124,42,232,.15);margin-top:16px">
+          <svg viewBox="0 0 24 24" stroke="rgba(160,100,220,.9)"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+        </div>
+        <div class="pillar-num" style="color:rgba(160,100,220,.7)">Pillar 02</div>
+        <div class="pillar-name">Resources</div>
+        <p class="pillar-desc">Practical tools, guides, and downloads to support your journey — available whenever you need them, with no paywall.</p>
+        <div class="pillar-items">
+          <div class="pillar-item"><div class="pillar-dot" style="background:rgba(160,100,220,.9)"></div>Ebooks</div>
+          <div class="pillar-item"><div class="pillar-dot" style="background:rgba(160,100,220,.9)"></div>Worksheets</div>
+          <div class="pillar-item"><div class="pillar-dot" style="background:rgba(160,100,220,.9)"></div>Reflection Guides</div>
+          <div class="pillar-item"><div class="pillar-dot" style="background:rgba(160,100,220,.9)"></div>Purpose &amp; Clarity Tools</div>
+        </div>
+      </div>
+
+      <!-- COMMUNITY -->
+      <div class="pillar-card ap d2">
+        <div class="pillar-ico" style="background:rgba(247,195,49,.1)">
+          <svg viewBox="0 0 24 24" stroke="#F7C331"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <div class="pillar-num" style="color:rgba(247,195,49,.7)">Pillar 03</div>
+        <div class="pillar-name">Community</div>
+        <p class="pillar-desc">A real community of people committed to growth. Not a mailing list. Not a feed. A place where people show up for each other.</p>
+        <div class="pillar-items">
+          <div class="pillar-item"><div class="pillar-dot" style="background:#F7C331"></div>Discussions</div>
+          <div class="pillar-item"><div class="pillar-dot" style="background:#F7C331"></div>Accountability</div>
+          <div class="pillar-item"><div class="pillar-dot" style="background:#F7C331"></div>Peer Support</div>
+          <div class="pillar-item"><div class="pillar-dot" style="background:#F7C331"></div>Meaningful Connection</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="text-align:center;margin-top:56px" class="ap d3">
+      <a href="https://www.skool.com/reality-creation-collective-4161/about" target="_blank" rel="noopener" class="btn-join">Join The Community — Free →</a>
+      <p style="font-family:'Jost',sans-serif;font-size:12px;font-weight:300;color:rgba(243,240,235,.25);margin-top:14px">No credit card required · Free forever</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ 05 — INSIDE SKOOL ══ -->
+<section id="comm-inside">
+  <div class="inside-inner">
+    <div class="inside-hdr">
+      <div class="inside-label ap">What you'll find</div>
+      <h2 class="inside-h2 ap d1">Here's exactly what's waiting<br><em>inside when you join.</em></h2>
+      <p class="inside-sub ap d2">No surprises. No locked content. This is everything that's available to you from day one — free.</p>
+    </div>
+
+    <div class="inside-grid">
+      <div class="inside-card ap">
+        <div class="inside-card-tag">Courses</div>
+        <div class="inside-card-title">The Fulfilment Framework</div>
+        <div class="inside-card-desc">Joel's core framework for understanding and improving the seven areas of life that determine how fulfilled you feel.</div>
+        <div class="inside-card-items">
+          <div class="inside-card-item"><div class="inside-card-item-dot"></div>7 module course</div>
+          <div class="inside-card-item"><div class="inside-card-item-dot"></div>Video lessons</div>
+          <div class="inside-card-item"><div class="inside-card-item-dot"></div>Workbook included</div>
+        </div>
+      </div>
+      <div class="inside-card ap d1">
+        <div class="inside-card-tag">Events</div>
+        <div class="inside-card-title">Live Workshops &amp; Events</div>
+        <div class="inside-card-desc">Regular live events, workshops, and speaker sessions. Community members get early access and priority invitations.</div>
+        <div class="inside-card-items">
+          <div class="inside-card-item"><div class="inside-card-item-dot"></div>Monthly workshops</div>
+          <div class="inside-card-item"><div class="inside-card-item-dot"></div>Guest speakers</div>
+          <div class="inside-card-item"><div class="inside-card-item-dot"></div>In-person events</div>
+        </div>
+      </div>
+      <div class="inside-card ap d2">
+        <div class="inside-card-tag">Resources</div>
+        <div class="inside-card-title">Free Ebooks &amp; Guides</div>
+        <div class="inside-card-desc">A growing library of practical resources covering purpose, relationships, health, career, finances, mindset, and contribution.</div>
+        <div class="inside-card-items">
+          <div class="inside-card-item"><div class="inside-card-item-dot"></div>The 7 Areas of Fulfilment</div>
+          <div class="inside-card-item"><div class="inside-card-item-dot"></div>Purpose Discovery Guide</div>
+          <div class="inside-card-item"><div class="inside-card-item-dot"></div>Confidence Toolkit</div>
+        </div>
+      </div>
+      <div class="inside-card ap">
+        <div class="inside-card-tag">Resources</div>
+        <div class="inside-card-title">Worksheets &amp; Reflection Tools</div>
+        <div class="inside-card-desc">Structured exercises that turn insight into action. Designed to be used regularly as you grow through different seasons of life.</div>
+        <div class="inside-card-items">
+          <div class="inside-card-item"><div class="inside-card-item-dot"></div>Fulfilment Reflection Workbook</div>
+          <div class="inside-card-item"><div class="inside-card-item-dot"></div>Relationship Reflection</div>
+          <div class="inside-card-item"><div class="inside-card-item-dot"></div>Goal Clarity Sheet</div>
+        </div>
+      </div>
+      <div class="inside-card ap d1">
+        <div class="inside-card-tag">Community</div>
+        <div class="inside-card-title">Discussions &amp; Accountability</div>
+        <div class="inside-card-desc">Post where you are. Share what you're working on. Get real feedback from people who are on the same path.</div>
+        <div class="inside-card-items">
+          <div class="inside-card-item"><div class="inside-card-item-dot"></div>Topic discussions</div>
+          <div class="inside-card-item"><div class="inside-card-item-dot"></div>Weekly check-ins</div>
+          <div class="inside-card-item"><div class="inside-card-item-dot"></div>Accountability threads</div>
+        </div>
+      </div>
+      <div class="inside-card ap d2" style="background:linear-gradient(135deg,rgba(124,42,232,.06),rgba(75,0,130,.04));border-color:rgba(124,42,232,.2);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center">
+        <div style="font-family:'Playfair Display',serif;font-size:20px;font-weight:300;font-style:italic;color:var(--void);margin-bottom:12px">And more added regularly.</div>
+        <div style="font-family:'Jost',sans-serif;font-size:13px;font-weight:300;color:rgba(26,24,20,.5);line-height:1.7;margin-bottom:24px">New courses, resources, and events are added every month. Join now and get access to everything — past and future.</div>
+        <a href="https://www.skool.com/reality-creation-collective-4161/about" target="_blank" rel="noopener" class="btn-join" style="font-size:12px;padding:12px 26px">Join Free →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ 06 — WHO IT'S FOR ══ -->
+<section id="comm-who">
+  <div class="who-inner">
+    <div class="who-hdr">
+      <div class="who-label ap">Is this for you?</div>
+      <h2 class="who-h2 ap d1">This community is built for people<br><em>ready to live differently.</em></h2>
+    </div>
+    <div class="who-grid">
+      <div class="who-card ap">
+        <div class="who-ico">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+        </div>
+        <div class="who-name">The Seeker</div>
+        <p class="who-desc">You know there's more to life than what you're currently experiencing. You're looking for a framework and a community to help you find it.</p>
+      </div>
+      <div class="who-card ap d1">
+        <div class="who-ico">
+          <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <div class="who-name">The Achiever</div>
+        <p class="who-desc">You've hit goals but something still feels missing. Success on paper hasn't translated to fulfilment in life. You want to understand why.</p>
+      </div>
+      <div class="who-card ap d2">
+        <div class="who-ico">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <div class="who-name">The Connector</div>
+        <p class="who-desc">You thrive in community and want to be around people who are genuinely growing. You're tired of surface-level relationships and small talk.</p>
+      </div>
+      <div class="who-card ap d3">
+        <div class="who-ico">
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <div class="who-name">The Builder</div>
+        <p class="who-desc">You're building something — a business, a life, a legacy. You want tools, accountability, and people around you who understand the journey.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ 07 — COMMUNITY MOMENTS ══ -->
+<section id="comm-moments">
+  <div class="moments-inner">
+    <div class="moments-hdr">
+      <div class="moments-label ap">Real moments</div>
+      <h2 class="moments-h2 ap d1">This is what community<br><em>looks like in real life.</em></h2>
+    </div>
+    <div class="moments-grid">
+      <div class="moment-item ap" style="aspect-ratio:3/4">
+        <img src="photos/community-panel.jpg" alt="Joel hosting community panel" loading="lazy">
+        <div class="moment-item-overlay"></div>
+      </div>
+      <div class="moment-item ap d1" style="aspect-ratio:16/10">
+        <img src="photos/community-forum.jpg" alt="Men's Day Forum" loading="lazy">
+        <div class="moment-item-overlay"></div>
+      </div>
+      <div class="moment-item ap d2" style="aspect-ratio:16/10">
+        <img src="photos/IMD Forum 2023 whole group.JPG" alt="Community group" loading="lazy">
+        <div class="moment-item-overlay"></div>
+      </div>
+      <div class="moment-item ap d1" style="aspect-ratio:16/10">
+        <img src="photos/Panel photo.JPG" alt="Panel event" loading="lazy">
+        <div class="moment-item-overlay"></div>
+      </div>
+      <div class="moment-item ap d2" style="aspect-ratio:16/10">
+        <img src="photos/IMG_2554.JPG" alt="Community event" loading="lazy">
+        <div class="moment-item-overlay"></div>
+      </div>
+    </div>
+    <div class="moments-quote ap d3">
+      <p class="moments-quote-text">"The gap between where you are and where you sense you could be — that gap has a name. And this community is where people close it."</p>
+      <div class="moments-quote-attr">— Joel Benesha, Founder</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ 08 — FINAL CTA ══ -->
+<section id="comm-cta">
+  <div class="cta-bg"></div>
+  <div class="cta-grad"></div>
+  <div class="cta-orb-l"></div>
+  <div class="cta-orb-r"></div>
+  <div class="cta-inner">
+    <div class="cta-label ap">Your next step</div>
+    <h2 class="cta-h2 ap d1">Join The<br><em>Community.</em></h2>
+    <p class="cta-p ap d2">Everything inside is free. Courses, resources, discussions, events, and real human connection — waiting for you on Skool.</p>
+    <p class="cta-free ap d2">No credit card. No catch. Free forever.</p>
+    <div class="cta-acts ap d3">
+      <a href="https://www.skool.com/reality-creation-collective-4161/about" target="_blank" rel="noopener" class="btn-join" style="font-size:15px;padding:18px 44px">Join The Community — Free →</a>
+    </div>
+    <div class="cta-trust ap d4">
+      <div class="cta-trust-item">
+        <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+        Free forever
+      </div>
+      <div class="cta-trust-item">
+        <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+        No credit card needed
+      </div>
+      <div class="cta-trust-item">
+        <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+        Join in 60 seconds
+      </div>
+      <div class="cta-trust-item">
+        <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+        Instant access to everything
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <div class="ft-top">
+    <div class="ft-brand">
+      <div class="ft-brand-name">
+        <img src="photos/Logo real.png" alt="RCC" style="width:42px;height:42px;border-radius:8px;object-fit:contain">
+        Reality Creation Centre
+      </div>
+      <p class="ft-brand-tag">A community and transformation platform helping people build all seven dimensions of a fulfilled life. Free to join. Open to everyone.</p>
+      <div class="ft-social">
+        <a href="https://www.instagram.com/discoveryou_podcast/" target="_blank" rel="noopener" class="ft-soc-a"><svg viewBox="0 0 24 24" fill="rgba(243,240,235,.45)"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4" fill="var(--void)"/><circle cx="17.5" cy="6.5" r="1" fill="rgba(243,240,235,.45)"/></svg></a>
+        <a href="https://www.youtube.com/@DiscoverYouPodcast" target="_blank" rel="noopener" class="ft-soc-a"><svg viewBox="0 0 24 24" fill="rgba(243,240,235,.45)"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="var(--void)"/></svg></a>
+        <a href="https://www.instagram.com/joel.benesha/" target="_blank" rel="noopener" class="ft-soc-a"><svg viewBox="0 0 24 24" fill="rgba(243,240,235,.45)"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4" fill="var(--void)"/><circle cx="17.5" cy="6.5" r="1" fill="rgba(243,240,235,.45)"/></svg></a>
+      </div>
+    </div>
+    <div class="ft-nav-col">
+      <div class="ft-nav-label">Navigate</div>
+      <ul class="ft-nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="podcast.html">Podcast</a></li>
+        <li><a href="media.html">Media &amp; Storytelling</a></li>
+        <li><a href="coaching.html">Fulfilment</a></li>
+        <li><a href="speaking.html">Speaking</a></li>
+        <li><a href="partner.html">Partner</a></li>
+        <li><a href="about.html">About Joel</a></li>
+      </ul>
+    </div>
+    <div class="ft-cta-col">
+      <div class="ft-cta-label">Join the Centre</div>
+      <p class="ft-cta-hed">"The gap between where you are and where you sense you could be — that gap has a name."</p>
+      <p class="ft-cta-sub">Free to join. Open to everyone. No background or experience required.</p>
+      <a href="https://www.skool.com/reality-creation-collective-4161/about" target="_blank" rel="noopener" class="btn btn-fill" style="text-align:center">Join The Community — Free</a>
+    </div>
+  </div>
+  <div class="ft-bottom">
+    <span class="ft-copy-new">&copy; 2025 Reality Creation Centre &middot; Joel Benesha &middot; Brisbane, QLD, Australia</span>
+    <ul class="ft-bottom-links"><li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li><li><a href="partner.html">Partner with Us</a></li></ul>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

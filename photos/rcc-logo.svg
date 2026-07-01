@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 220" width="240" height="220">
+  <!-- Purple square background (slightly left of centre to leave room for swirl) -->
+  <rect x="0" y="16" width="192" height="192" rx="16" fill="#4B0082"/>
+
+  <!-- RC letters in white bold italic -->
+  <text x="14" y="148"
+        font-family="Georgia,'Times New Roman',serif"
+        font-size="120" font-weight="700" font-style="italic"
+        fill="white" letter-spacing="-6">RC</text>
+
+  <!-- Gold swirl — loops up from ~x140,y60, arcs right and down, curls under -->
+  <path d="
+    M 142 54
+    C 148 30, 168 22, 186 36
+    C 204 50, 208 78, 196 104
+    C 188 122, 174 136, 160 148
+    C 152 154, 146 160, 147 166
+    C 148 172, 154 174, 158 173
+  "
+  fill="none" stroke="#D4A017" stroke-width="5.5" stroke-linecap="round"/>
+
+  <!-- Upper hook of the swirl (curl above) -->
+  <path d="M 142 54 C 136 42, 124 38, 114 44"
+  fill="none" stroke="#D4A017" stroke-width="5.5" stroke-linecap="round"/>
+
+  <!-- Gold dot at tail -->
+  <circle cx="159" cy="175" r="4" fill="#D4A017"/>
+</svg>
