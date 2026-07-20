@@ -101,10 +101,10 @@
 .port-videos{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:52px}
 .port-videos-landscape{grid-template-columns:repeat(2,1fr)}
 .port-videos-shorts{grid-template-columns:repeat(5,1fr)}
-.port-videos-shorts .port-vid-card video{aspect-ratio:9/16;object-fit:contain;background:#000}
+.port-videos-shorts .port-vid-card video,.port-videos-shorts .port-vid-card iframe{aspect-ratio:9/16;object-fit:contain;background:#000}
 .port-vid-card{border-radius:16px;overflow:hidden;background:#0d0b18;border:1px solid rgba(255,255,255,.07);transition:border-color .3s,transform .3s}
 .port-vid-card:hover{border-color:rgba(247,195,49,.3);transform:translateY(-3px)}
-.port-vid-card video{width:100%;aspect-ratio:16/9;object-fit:contain;display:block;background:#000}
+.port-vid-card video,.port-vid-card iframe{width:100%;aspect-ratio:16/9;object-fit:contain;display:block;background:#000;border:0}
 .port-vid-meta{padding:16px 18px}
 .port-vid-tag{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
 .port-vid-title{font-family:'Playfair Display',serif;font-size:16px;font-weight:400;color:#fff;margin:0}
@@ -442,9 +442,7 @@
       <div class="port-videos port-videos-landscape" style="margin-bottom:40px">
 
         <div class="port-vid-card ap">
-          <video controls preload="metadata" poster="photos/portfolio/thumb-event-highlight.jpg">
-            <source src="videos/1.Event Highlight.mp4" type="video/mp4">
-          </video>
+          <iframe src="https://www.youtube.com/embed/ECySR0MIwaM" title="Event Highlight Reel" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           <div class="port-vid-meta">
             <div class="port-vid-tag">Awards Australia</div>
             <div class="port-vid-title">Event Highlight Reel</div>
@@ -452,9 +450,7 @@
         </div>
 
         <div class="port-vid-card ap d1">
-          <video controls preload="metadata">
-            <source src="videos/7.Event Atmosphere.mov" type="video/mp4">
-          </video>
+          <iframe src="https://www.youtube.com/embed/cGCvREz-i0k" title="Event Atmosphere" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           <div class="port-vid-meta">
             <div class="port-vid-tag">7News</div>
             <div class="port-vid-title">Event Atmosphere</div>
@@ -488,9 +484,7 @@
       <div class="port-videos port-videos-shorts">
 
         <div class="port-vid-card ap">
-          <video controls preload="metadata" style="aspect-ratio:9/16" poster="photos/portfolio/thumb-community-commentary.jpg">
-            <source src="videos/Northern Territory Alcohol Crisis_ Community Carnage Explained.mp4" type="video/mp4">
-          </video>
+          <iframe src="https://www.youtube.com/embed/dAOYvdCBrFI" title="Darwin Family Law" style="aspect-ratio:9/16" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           <div class="port-vid-meta">
             <div class="port-vid-tag">Community Commentary</div>
             <div class="port-vid-title">Darwin Family Law</div>
@@ -508,9 +502,7 @@
         </div>
 
         <div class="port-vid-card ap d2">
-          <video controls preload="metadata" style="aspect-ratio:9/16" poster="photos/portfolio/thumb-keynote.jpg">
-            <source src="videos/4.Keynote Speech.mp4" type="video/mp4">
-          </video>
+          <iframe src="https://www.youtube.com/embed/_AWqWcHRYL0" title="Keynote Speech" style="aspect-ratio:9/16" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           <div class="port-vid-meta">
             <div class="port-vid-tag">Speaking</div>
             <div class="port-vid-title">Keynote Speech</div>
@@ -518,9 +510,7 @@
         </div>
 
         <div class="port-vid-card ap d3">
-          <video controls preload="metadata" style="aspect-ratio:9/16">
-            <source src="videos/short d.mp4" type="video/mp4">
-          </video>
+          <iframe src="https://www.youtube.com/embed/fzXtSj3h27s" title="Studio Guest Interview" style="aspect-ratio:9/16" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           <div class="port-vid-meta">
             <div class="port-vid-tag">Podcast Interview</div>
             <div class="port-vid-title">Studio Guest Interview</div>
@@ -528,9 +518,7 @@
         </div>
 
         <div class="port-vid-card ap d4">
-          <video controls preload="metadata" style="aspect-ratio:9/16">
-            <source src="videos/6.Highlight reel.mov" type="video/mp4">
-          </video>
+          <iframe src="https://www.youtube.com/embed/p7pZVpbVWRU" title="Business Award Highlight" style="aspect-ratio:9/16" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           <div class="port-vid-meta">
             <div class="port-vid-tag">Award Ceremony</div>
             <div class="port-vid-title">Business Award Highlight</div>
@@ -548,9 +536,7 @@
         </div>
 
         <div class="port-vid-card ap d6">
-          <video controls preload="metadata" style="aspect-ratio:9/16" poster="photos/portfolio/thumb-trader-bar.jpg">
-            <source src="videos/Trader Bar (samaf).mov" type="video/mp4">
-          </video>
+          <iframe src="https://www.youtube.com/embed/pYgNHrr6V-o" title="Venue Profile" style="aspect-ratio:9/16" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           <div class="port-vid-meta">
             <div class="port-vid-tag">Corporate Event Coverage</div>
             <div class="port-vid-title">Venue Profile</div>
@@ -568,9 +554,7 @@
         </div>
 
         <div class="port-vid-card ap d8">
-          <video controls preload="metadata" style="aspect-ratio:9/16">
-            <source src="videos/Highlight Video.mov" type="video/mp4">
-          </video>
+          <iframe src="https://www.youtube.com/embed/KDr7etPT9jw" title="Event Highlight" style="aspect-ratio:9/16" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           <div class="port-vid-meta">
             <div class="port-vid-tag">Event Reel</div>
             <div class="port-vid-title">Event Highlight</div>
@@ -664,22 +648,22 @@
     <!-- ALL PANEL (hidden by default) -->
     <div id="port-all-panel" style="display:none">
       <div class="port-videos port-videos-landscape" style="margin-bottom:24px">
-        <div class="port-vid-card ap"><video controls preload="metadata" poster="photos/portfolio/thumb-event-highlight.jpg"><source src="videos/1.Event Highlight.mp4" type="video/mp4"></video><div class="port-vid-meta"><div class="port-vid-tag">Award Ceremony</div><div class="port-vid-title">Event Highlight Reel</div></div></div>
-        <div class="port-vid-card ap d1"><video controls preload="metadata"><source src="videos/7.Event Atmosphere.mov" type="video/mp4"></video><div class="port-vid-meta"><div class="port-vid-tag">Event Coverage</div><div class="port-vid-title">Awards Night Atmosphere</div></div></div>
+        <div class="port-vid-card ap"><iframe src="https://www.youtube.com/embed/ECySR0MIwaM" title="Event Highlight Reel" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><div class="port-vid-meta"><div class="port-vid-tag">Award Ceremony</div><div class="port-vid-title">Event Highlight Reel</div></div></div>
+        <div class="port-vid-card ap d1"><iframe src="https://www.youtube.com/embed/cGCvREz-i0k" title="Awards Night Atmosphere" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><div class="port-vid-meta"><div class="port-vid-tag">Event Coverage</div><div class="port-vid-title">Awards Night Atmosphere</div></div></div>
         <div class="port-vid-card ap d2"><video controls preload="metadata"><source src="videos/mayor.mp4" type="video/mp4"></video><div class="port-vid-meta"><div class="port-vid-tag">Sponsorship Interview</div><div class="port-vid-title">Mayor of Palmerston</div></div></div>
         <div class="port-vid-card ap d3"><video controls preload="metadata" poster="photos/portfolio/thumb-dimension.jpg"><source src="videos/Sponsored Interview - Dimension Australia.mp4" type="video/mp4"></video><div class="port-vid-meta"><div class="port-vid-tag">Brand Storytelling</div><div class="port-vid-title">Dimension Australia</div></div></div>
       </div>
       <div class="port-videos port-videos-shorts" style="margin-bottom:40px">
-        <div class="port-vid-card ap"><video controls preload="metadata" style="aspect-ratio:9/16" poster="photos/portfolio/thumb-community-commentary.jpg"><source src="videos/Northern Territory Alcohol Crisis_ Community Carnage Explained.mp4" type="video/mp4"></video><div class="port-vid-meta"><div class="port-vid-tag">Documentary</div><div class="port-vid-title">NT Alcohol Crisis Explained</div></div></div>
+        <div class="port-vid-card ap"><iframe src="https://www.youtube.com/embed/dAOYvdCBrFI" title="NT Alcohol Crisis Explained" style="aspect-ratio:9/16" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><div class="port-vid-meta"><div class="port-vid-tag">Documentary</div><div class="port-vid-title">NT Alcohol Crisis Explained</div></div></div>
         <div class="port-vid-card ap d1"><video controls preload="metadata" style="aspect-ratio:9/16"><source src="videos/2.Winner Interview.mp4" type="video/mp4"></video><div class="port-vid-meta"><div class="port-vid-tag">Red Carpet Interview</div><div class="port-vid-title">Award Winner Interview</div></div></div>
         <div class="port-vid-card ap d2"><video controls preload="metadata" style="aspect-ratio:9/16"><source src="videos/5.Guest Waterfront interview.mp4" type="video/mp4"></video><div class="port-vid-meta"><div class="port-vid-tag">On-Location Interview</div><div class="port-vid-title">Waterfront Guest Interview</div></div></div>
-        <div class="port-vid-card ap d3"><video controls preload="metadata" style="aspect-ratio:9/16"><source src="videos/short d.mp4" type="video/mp4"></video><div class="port-vid-meta"><div class="port-vid-tag">Podcast Interview</div><div class="port-vid-title">Studio Guest Interview</div></div></div>
+        <div class="port-vid-card ap d3"><iframe src="https://www.youtube.com/embed/fzXtSj3h27s" title="Studio Guest Interview" style="aspect-ratio:9/16" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><div class="port-vid-meta"><div class="port-vid-tag">Podcast Interview</div><div class="port-vid-title">Studio Guest Interview</div></div></div>
         <div class="port-vid-card ap d4"><video controls preload="metadata" style="aspect-ratio:9/16"><source src="videos/Street Interview new.mp4" type="video/mp4"></video><div class="port-vid-meta"><div class="port-vid-tag">Street Interview</div><div class="port-vid-title">Street Stories</div></div></div>
-        <div class="port-vid-card ap d5"><video controls preload="metadata" style="aspect-ratio:9/16" poster="photos/portfolio/thumb-keynote.jpg"><source src="videos/4.Keynote Speech.mp4" type="video/mp4"></video><div class="port-vid-meta"><div class="port-vid-tag">Speaking</div><div class="port-vid-title">Keynote Speech</div></div></div>
+        <div class="port-vid-card ap d5"><iframe src="https://www.youtube.com/embed/_AWqWcHRYL0" title="Keynote Speech" style="aspect-ratio:9/16" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><div class="port-vid-meta"><div class="port-vid-tag">Speaking</div><div class="port-vid-title">Keynote Speech</div></div></div>
         <div class="port-vid-card ap d6"><video controls preload="metadata" style="aspect-ratio:9/16"><source src="videos/Discover You Podcast - Jim Introduction.mp4" type="video/mp4"></video><div class="port-vid-meta"><div class="port-vid-tag">Studio Interview</div><div class="port-vid-title">Guest Introduction</div></div></div>
-        <div class="port-vid-card ap d7"><video controls preload="metadata" style="aspect-ratio:9/16"><source src="videos/6.Highlight reel.mov" type="video/mp4"></video><div class="port-vid-meta"><div class="port-vid-tag">Award Ceremony</div><div class="port-vid-title">Business Award Highlight</div></div></div>
-        <div class="port-vid-card ap d8"><video controls preload="metadata" style="aspect-ratio:9/16" poster="photos/portfolio/thumb-trader-bar.jpg"><source src="videos/Trader Bar (samaf).mov" type="video/mp4"></video><div class="port-vid-meta"><div class="port-vid-tag">Corporate Event Coverage</div><div class="port-vid-title">Venue Profile</div></div></div>
-        <div class="port-vid-card ap d9"><video controls preload="metadata" style="aspect-ratio:9/16"><source src="videos/Highlight Video.mov" type="video/mp4"></video><div class="port-vid-meta"><div class="port-vid-tag">Event Reel</div><div class="port-vid-title">Event Highlight</div></div></div>
+        <div class="port-vid-card ap d7"><iframe src="https://www.youtube.com/embed/p7pZVpbVWRU" title="Business Award Highlight" style="aspect-ratio:9/16" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><div class="port-vid-meta"><div class="port-vid-tag">Award Ceremony</div><div class="port-vid-title">Business Award Highlight</div></div></div>
+        <div class="port-vid-card ap d8"><iframe src="https://www.youtube.com/embed/pYgNHrr6V-o" title="Venue Profile" style="aspect-ratio:9/16" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><div class="port-vid-meta"><div class="port-vid-tag">Corporate Event Coverage</div><div class="port-vid-title">Venue Profile</div></div></div>
+        <div class="port-vid-card ap d9"><iframe src="https://www.youtube.com/embed/KDr7etPT9jw" title="Event Highlight" style="aspect-ratio:9/16" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><div class="port-vid-meta"><div class="port-vid-tag">Event Reel</div><div class="port-vid-title">Event Highlight</div></div></div>
       </div>
       <div class="port-photos">
         <div class="port-photo-item ap" onclick="portLightbox('photos/portfolio/1.Forum.JPG','Forum')"><img src="photos/portfolio/1.Forum.JPG" loading="lazy"><div class="port-photo-overlay"><span>Forum</span></div></div>
