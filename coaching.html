@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Discover your fulfilment score across the seven areas of life. The Reality Creation Fulfilment Framework helps you understand where you are strong, where you feel disconnected, and where your next level of growth begins.">
-<title>Fulfilment — Reality Creation Centre</title>
+<title>Fulfilment — Reality Creation</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Libre+Baskerville:ital,wght@0,400;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
@@ -201,16 +201,16 @@
 <div id="cur"></div>
 <nav id="nav" class="dk">
   <a href="index.html" class="nlogo">
-    <img src="photos/Logo real.png" alt="Reality Creation Centre" class="nlogo-img" style="width:44px;height:44px;border-radius:8px;object-fit:contain;flex-shrink:0">
-    <div><span class="nlogo-t">Reality Creation</span><span class="nlogo-s">Centre</span></div>
+    <img src="photos/Logo real.png" alt="Reality Creation" class="nlogo-img" style="width:44px;height:44px;border-radius:8px;object-fit:contain;flex-shrink:0">
+    <div><span class="nlogo-t">Reality Creation</span></div>
   </a>
   <ul class="nlinks">
     <li><a href="index.html"        class="nl">Home</a></li>
-    <li><a href="coaching.html"     class="nl active">Fulfilment</a></li>
+    <li><a href="coaching.html"     class="nl active">Coaching</a></li>
     <li><a href="podcast.html"      class="nl">Podcast</a></li>
     <li><a href="media.html"        class="nl">Media &amp; Storytelling</a></li>
     <li><a href="community.html"    class="nl">Community</a></li>
-    <li><a href="index.html#diagnostic" class="nl ncta">Take Quiz</a></li>
+    <li><a href="coaching.html#diagnostic-cta" class="nl ncta">Take Quiz</a></li>
   </ul>
   <div class="nham"><span></span><span></span><span></span></div>
 </nav>
@@ -220,7 +220,7 @@
 <section id="hero">
   <div class="h-left">
     <div class="h-atmo"></div><div class="h-scan"></div>
-    <div class="h-eyebrow ap"><span class="h-eyebrow-rule"></span>Reality Creation Centre · Fulfilment</div>
+    <div class="h-eyebrow ap"><span class="h-eyebrow-rule"></span>Reality Creation · Fulfilment</div>
     <h1 class="h-h1">
       <span class="h-line"><span class="h-li" id="hl0">Success Isn't</span></span>
       <span class="h-line dl1"><span class="h-li h-l2" id="hl1">The Same As</span></span>
@@ -231,7 +231,7 @@
       <div>
         <p class="h-sub">Many people achieve success on paper yet still feel disconnected, overwhelmed, stuck, or uncertain about what truly matters.<br><br>Discover where you stand across the seven areas of life and identify what may be preventing you from living with greater clarity, purpose, and fulfilment.</p>
         <div class="h-acts">
-          <a href="index.html#diagnostic" class="btn btn-cream">Take The Fulfilment Quiz</a>
+          <a href="#diagnostic-cta" onclick="document.getElementById('d-ov').classList.add('open');document.body.style.overflow='hidden';return false" class="btn btn-cream">Take The Fulfilment Quiz</a>
           <a href="#framework" class="btn btn-ghost-lt">Learn About The Framework</a>
         </div>
       </div>
@@ -264,7 +264,7 @@
     <div style="max-width:640px;margin-bottom:36px">
       <p class="ap" style="font-size:16px;font-weight:300;color:var(--stone);line-height:1.88">When one area is neglected, it often affects every other area. True fulfilment begins when you can clearly see the whole picture.</p>
     </div>
-    <a href="index.html#diagnostic" class="btn btn-fill ap d1">Take The Fulfilment Quiz</a>
+    <a href="#diagnostic-cta" onclick="document.getElementById('d-ov').classList.add('open');document.body.style.overflow='hidden';return false" class="btn btn-fill ap d1">Take The Fulfilment Quiz</a>
   </div>
 </section>
 
@@ -297,7 +297,7 @@
           <div style="display:flex;align-items:flex-start;gap:14px;padding:14px 0;border-bottom:1px solid var(--rule)"><div style="width:5px;height:5px;border-radius:50%;background:var(--p);opacity:.32;flex-shrink:0;margin-top:9px"></div><div style="font-size:13.5px;font-weight:300;color:var(--stone);line-height:1.6"><strong style="color:var(--ink);font-weight:400">A Reflective Insight</strong> — something you already sense but haven't yet named</div></div>
         </div>
         <div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap" class="ap d3">
-          <button class="btn btn-fill" onclick="window.location.href='index.html#diagnostic'">Take The Fulfilment Quiz</button>
+          <button class="btn btn-fill" onclick="document.getElementById('d-ov').classList.add('open');document.body.style.overflow='hidden'">Take The Fulfilment Quiz</button>
           <span style="font-size:12px;font-weight:300;color:var(--stone-lt)">Free assessment · No registration required · Takes around 7 minutes</span>
         </div>
       </div>
@@ -324,7 +324,38 @@
   </div>
 </section>
 
-
+<!-- DIAGNOSTIC MODAL -->
+<div class="d-ov" id="d-ov" role="dialog" aria-modal="true">
+  <div class="d-modal">
+    <div class="d-inner">
+      <button class="d-close" id="d-close">&#x2715;</button>
+      <div class="d-prog-track"><div class="d-prog-bar" id="d-prog"></div></div>
+      <div id="d-qwrap" class="d-qwrap">
+        <div class="d-step-lbl" id="d-slbl">Question 1 of 7</div>
+        <div class="d-qtext" id="d-qtext"></div>
+        <span class="d-atag" id="d-atag"></span>
+        <div class="d-opts" id="d-opts"></div>
+        <div class="d-nav">
+          <button class="d-back" id="d-back">&larr; Back</button>
+          <button class="d-next" id="d-next">Continue</button>
+        </div>
+      </div>
+      <div id="d-rwrap" class="d-result">
+        <div class="rl-lbl">Your Fulfilment Diagnostic</div>
+        <div class="rl-level" id="rl-level"></div>
+        <div class="rl-pat" id="rl-pat"></div>
+        <div class="rl-div"></div>
+        <div class="rl-ins" id="rl-ins"></div>
+        <div class="rl-ch" id="rl-ch"></div>
+        <div class="rl-areas" id="rl-areas"></div>
+        <div class="rl-ctas">
+          <a href="https://www.skool.com/reality-creation-collective-4161/about" class="btn btn-fill" target="_blank" rel="noopener" onclick="document.getElementById('d-ov').classList.remove('open');document.body.style.overflow=''">Join the Community &mdash; Free</a>
+          <button class="btn btn-outline" id="d-retake">Retake</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 <!-- ══ 02 — OPENING BELIEF ══ -->
@@ -436,7 +467,7 @@
       <div class="tl-row">
         <div></div>
         <div class="tl-node"><div class="tl-dot"></div><div class="tl-year">Now</div></div>
-        <div class="tl-r ap"><div class="tl-card"><img src="photos/my story/5. Glencore Winner - Joel Benesha (14).jpg" alt="NT Young Achiever Award 2024" style="width:100%;height:180px;object-fit:cover;object-position:top;border-radius:10px 10px 0 0;display:block;margin-bottom:20px"><div class="tl-tag">The Centre · 2024</div><div class="tl-title">2× NT Young Achiever Award · The Centre Opens</div><div class="tl-body">With <strong>200+ podcast episodes</strong>, <strong>50,000+ listeners across 15 countries</strong>, and <strong>2× NT Young Achiever Awards</strong> — Joel launched the Reality Creation Centre as a community and transformation platform open to everyone. The formula that brought him back to life is now available to all.</div></div></div>
+        <div class="tl-r ap"><div class="tl-card"><img src="photos/my story/5. Glencore Winner - Joel Benesha (14).jpg" alt="NT Young Achiever Award 2024" style="width:100%;height:180px;object-fit:cover;object-position:top;border-radius:10px 10px 0 0;display:block;margin-bottom:20px"><div class="tl-tag">The Centre · 2024</div><div class="tl-title">2× NT Young Achiever Award · The Centre Opens</div><div class="tl-body">With <strong>200+ podcast episodes</strong>, <strong>50,000+ listeners across 15 countries</strong>, and <strong>2× NT Young Achiever Awards</strong> — Joel launched Reality Creation as a community and transformation platform open to everyone. The formula that brought him back to life is now available to all.</div></div></div>
       </div>
     </div>
   </div>
@@ -609,7 +640,7 @@
         <div class="inc-row"><div class="inc-dot"></div><div class="inc-text"><strong>Direct access between sessions</strong> — message Joel directly, not a support team</div></div>
         <div class="inc-row"><div class="inc-dot"></div><div class="inc-text"><strong>Reflective tools &amp; workbooks</strong> — frameworks to use between sessions</div></div>
         <div class="inc-row"><div class="inc-dot"></div><div class="inc-text"><strong>Accountability structure</strong> — weekly check-ins and progress tracking across the seven areas</div></div>
-        <div class="inc-row"><div class="inc-dot"></div><div class="inc-text"><strong>Community membership</strong> — access to the Reality Creation Centre community throughout your engagement</div></div>
+        <div class="inc-row"><div class="inc-dot"></div><div class="inc-text"><strong>Community membership</strong> — access to the Reality Creation community throughout your engagement</div></div>
       </div>
     </div>
     <div class="ap d1">
@@ -622,7 +653,7 @@
           <div style="width:100%;height:1px;background:rgba(255,255,255,.08);margin-bottom:24px"></div>
           <p style="font-size:14px;font-weight:300;color:rgba(243,240,235,.45);line-height:1.82;margin-bottom:32px">Places are limited. Joel works with a small number of coaching clients at any one time to ensure the depth of engagement every client deserves. Applications are reviewed individually.</p>
           <button onclick="openCoachingForm()" class="btn btn-cream" style="display:block;text-align:center;width:100%;cursor:pointer;border:none">Apply For Coaching</button>
-          <a href="index.html#diagnostic" class="btn btn-ghost-lt" style="display:block;text-align:center;margin-top:10px">Take The Fulfilment Quiz First</a>
+          <a href="#diagnostic-cta" onclick="document.getElementById('d-ov').classList.add('open');document.body.style.overflow='hidden';return false" class="btn btn-ghost-lt" style="display:block;text-align:center;margin-top:10px">Take The Fulfilment Quiz First</a>
           <p style="font-size:11.5px;font-weight:300;color:rgba(243,240,235,.25);text-align:center;margin-top:14px">Limited places · Application required</p>
         </div>
       </div>
@@ -668,11 +699,11 @@
     <div>
       <div class="sec-label ap">The mission behind the work</div>
       <h2 style="font-family:var(--serif);font-size:clamp(24px,3vw,42px);font-weight:300;line-height:1.12;letter-spacing:-.018em;color:var(--ink);margin-bottom:22px" class="ap d1">Not a coaching business. <em style="font-style:italic;color:var(--stone)">A calling.</em></h2>
-      <p style="font-size:16px;font-weight:300;color:var(--stone);line-height:1.9;margin-bottom:18px" class="ap d2">Reality Creation Centre exists to help people create more fulfilling lives. Through coaching, community, storytelling, personal growth, and meaningful connection, we help people reconnect with who they are and what matters most.</p>
+      <p style="font-size:16px;font-weight:300;color:var(--stone);line-height:1.9;margin-bottom:18px" class="ap d2">Reality Creation exists to help people create more fulfilling lives. Through coaching, community, storytelling, personal growth, and meaningful connection, we help people reconnect with who they are and what matters most.</p>
       <p style="font-size:16px;font-weight:300;color:var(--stone);line-height:1.9;margin-bottom:18px" class="ap d3">This work is not about building a personal brand. It is about creating a centre where people can grow, belong, tell their story, and build lives that feel meaningful.</p>
       <p style="font-size:16px;font-weight:300;color:var(--stone);line-height:1.9;margin-bottom:30px" class="ap d4">Joel chose this work not because it was profitable — but because the framework he built to survive became the most powerful thing he could give to others.</p>
       <div class="pq ap d3">
-        <p>"The Reality Creation Centre was not built as a personal brand. It was built as a community. I am its founder and guide — but the Centre belongs to everyone who walks through it."</p>
+        <p>"Reality Creation was not built as a personal brand. It was built as a community. I am its founder and guide — but it belongs to everyone who walks through it."</p>
         <cite>— Joel Benesha</cite>
       </div>
     </div>
@@ -699,7 +730,7 @@
         <div style="font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:rgba(232,184,75,.7);margin-bottom:10px">Option 1</div>
         <div style="font-family:var(--serif);font-size:17px;font-weight:300;color:#F3F0EB;margin-bottom:7px">Take The Fulfilment Quiz</div>
         <div style="font-size:13px;font-weight:300;color:rgba(243,240,235,.4);line-height:1.65;margin-bottom:16px">Understand where you are across the seven areas of life.</div>
-        <a href="index.html#diagnostic" class="btn btn-cream" style="font-size:12px;padding:11px 22px">Take The Quiz</a>
+        <a href="#diagnostic-cta" onclick="document.getElementById('d-ov').classList.add('open');document.body.style.overflow='hidden';return false" class="btn btn-cream" style="font-size:12px;padding:11px 22px">Take The Quiz</a>
       </div>
       <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:16px;padding:26px 28px">
         <div style="font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:rgba(232,184,75,.7);margin-bottom:10px">Option 2</div>
@@ -710,7 +741,7 @@
       <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:16px;padding:26px 28px">
         <div style="font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:rgba(232,184,75,.7);margin-bottom:10px">Option 3</div>
         <div style="font-family:var(--serif);font-size:17px;font-weight:300;color:#F3F0EB;margin-bottom:7px">Join The Community</div>
-        <div style="font-size:13px;font-weight:300;color:rgba(243,240,235,.4);line-height:1.65;margin-bottom:16px">Start with free access to the Reality Creation Centre community.</div>
+        <div style="font-size:13px;font-weight:300;color:rgba(243,240,235,.4);line-height:1.65;margin-bottom:16px">Start with free access to the Reality Creation community.</div>
         <a href="https://www.skool.com/reality-creation-collective-4161/about" target="_blank" rel="noopener" class="btn btn-outline" style="font-size:12px;padding:11px 22px;color:rgba(243,240,235,.7);border-color:rgba(243,240,235,.2)">Join Free</a>
       </div>
     </div>
@@ -720,16 +751,16 @@
 <footer>
   <div class="ft-logo" style="display:flex;align-items:center;gap:10px">
     <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEBLAEsAAD/4QC8RXhpZgAASUkqAAgAAAAGABIBAwABAAAAAQAAABoBBQABAAAAVgAAABsBBQABAAAAXgAAACgBAwABAAAAAgAAABMCAwABAAAAAQAAAGmHBAABAAAAZgAAAAAAAAAsAQAAAQAAACwBAAABAAAABgAAkAcABAAAADAyMTABkQcABAAAAAECAwAAoAcABAAAADAxMDABoAMAAQAAAP//AAACoAQAAQAAAC8NAAADoAQAAQAAAC8NAAAAAAAA/+EOx2h0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8APD94cGFja2V0IGJlZ2luPSfvu78nIGlkPSdXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQnPz4KPHg6eG1wbWV0YSB4bWxuczp4PSdhZG9iZTpuczptZXRhLyc+CjxyZGY6UkRGIHhtbG5zOnJkZj0naHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyc+CgogPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9JycKICB4bWxuczpBdHRyaWI9J2h0dHA6Ly9ucy5hdHRyaWJ1dGlvbi5jb20vYWRzLzEuMC8nPgogIDxBdHRyaWI6QWRzPgogICA8cmRmOlNlcT4KICAgIDxyZGY6bGkgcmRmOnBhcnNlVHlwZT0nUmVzb3VyY2UnPgogICAgIDxBdHRyaWI6Q3JlYXRlZD4yMDI2LTAyLTE0PC9BdHRyaWI6Q3JlYXRlZD4KICAgICA8QXR0cmliOkRhdGE+eyZxdW90O2RvYyZxdW90OzomcXVvdDtEQUd2M0REZGhpVSZxdW90OywmcXVvdDt1c2VyJnF1b3Q7OiZxdW90O1VBR2NiVUxfbGh3JnF1b3Q7LCZxdW90O2JyYW5kJnF1b3Q7OiZxdW90O0JBRVN6cGRMWjhBJnF1b3Q7fTwvQXR0cmliOkRhdGE+CiAgICAgPEF0dHJpYjpFeHRJZD4wMmY2YWM4Yi00ZGRhLTQ5ZmItOTdhZC1hNTZkYzBiZWNjZTI8L0F0dHJpYjpFeHRJZD4KICAgICA8QXR0cmliOkZiSWQ+NTI1MjY1OTE0MTc5NTgwPC9BdHRyaWI6RmJJZD4KICAgICA8QXR0cmliOlRvdWNoVHlwZT4yPC9BdHRyaWI6VG91Y2hUeXBlPgogICAgPC9yZGY6bGk+CiAgIDwvcmRmOlNlcT4KICA8L0F0dHJpYjpBZHM+CiA8L3JkZjpEZXNjcmlwdGlvbj4KCiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0nJwogIHhtbG5zOmRjPSdodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyc+CiAgPGRjOnRpdGxlPgogICA8cmRmOkFsdD4KICAgIDxyZGY6bGkgeG1sOmxhbmc9J3gtZGVmYXVsdCc+SW5zdGFncmFtIExvZ28gLSAxPC9yZGY6bGk+CiAgIDwvcmRmOkFsdD4KICA8L2RjOnRpdGxlPgogPC9yZGY6RGVzY3JpcHRpb24+CgogPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9JycKICB4bWxuczpwZGY9J2h0dHA6Ly9ucy5hZG9iZS5jb20vcGRmLzEuMy8nPgogIDxwZGY6QXV0aG9yPkJlcm5hZGV0dGUgUmV5ZXM8L3BkZjpBdXRob3I+CiA8L3JkZjpEZXNjcmlwdGlvbj4KCiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0nJwogIHhtbG5zOnhtcD0naHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyc+CiAgPHhtcDpDcmVhdG9yVG9vbD5DYW52YSBkb2M9REFHdjNERGRoaVUgdXNlcj1VQUdjYlVMX2xodyBicmFuZD1CQUVTenBkTFo4QTwveG1wOkNyZWF0b3JUb29sPgogPC9yZGY6RGVzY3JpcHRpb24+CjwvcmRmOlJERj4KPC94OnhtcG1ldGE+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCjw/eHBhY2tldCBlbmQ9J3cnPz7/2wBDAAQDAwMDAgQDAwMEBAQFBgoGBgUFBgwICQcKDgwPDg4MDQ0PERYTDxAVEQ0NExoTFRcYGRkZDxIbHRsYHRYYGRj/2wBDAQQEBAYFBgsGBgsYEA0QGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBj/wAARCAB4AHgDAREAAhEBAxEB/8QAHAABAAEFAQEAAAAAAAAAAAAAAAgBBAUGBwkD/8QAOxAAAQMDAwIDBAkDAgcAAAAAAQIDBAAFBgcREgghEzFBFFFhgQkVIiMyQmJxkRZyoZKxGDNSc6Kj0//EABsBAQACAwEBAAAAAAAAAAAAAAAEBQEDBgIH/8QAOREAAgEDAQYDBgMGBwAAAAAAAAECAwQRBQYSITFBURNhcRQiMoGRsXLR8BVCYqHB4QcWIyQzgvH/2gAMAwEAAhEDEQA/AIk19oO2FAKAUAoBQCgFAKAUAoBQCgFAKAUAoBQCgFAKAUAoBQCgFAKAUAoBQCgFAKAUAoBQCgFAKAUAoBQCgFAKAUAoBQCgFAKAUAoBQCgOiWXTJqNi7OW6hXn+mrK+N4jQa8WdcP8Ass7jZP61EDy9K4bUNsZVLuWmaHR9orx+J5xTp/jnx4/wxy/melDhmTwjKYnjemeoOTLw6wW/IrVPejurgXGbObfDriEFfF1pLaQkEA90qO3xqt1vV9oNnrRare1KVWnGUVOEYSi1GTxmM3JttN9Y8fI9RjGb3Unk5QpKkLUhQ2Uk7EfGvpUWpLKNZSsgUAoBQFCa8uWDDeDuGGdJ2red4HbcvsbVkFvuTXjMCVOLbnHkQCU8Dtvtv5+RFUNxtDbUKkqcs5RXVNSpwk4szZ6ItcQCQzjh+AuR/wDnWn/NFr2f0Nf7Vp9jneoGg2rGmUFVxyzEpDVtBANwiOJkx07nYclIJ4d/+oCrC01m2uXu05ce3Ik0b6nU4JnOAoVaKWSYpGWxnGMjzPJGcfxSyzLvcnu6I0RHJWw81E+SUj1USAPU1HuLylQi51HhGqpXjTWZMkHaOhXWS4W8SJ9xxe0uEb+zSJjji0/AlttSf4JqgntTaxeIxb/XqV8tVprkmfL/AIcsh0WZuWoGqNnjXq02dCXIse1uF9qU+TsgvbpBQ2k7blQ2/wBjze0etX2qRpaXpGabrNqdR/uRXPHH4muX5vKlWt/RqNtviunc4NleXXvNspk3+/y1SJTx2AHZDSB5NoT+VI9B8z3712mg6JZ6LZwsrGG7CP1b6yk+rfV/JcCZvuTyzftA2RAy+95s+NouOWaTMUs+XiKQW20/ud1fxXG/4nz9osbfSIfHc1YQ/wCqe9J/LCNlLhJy7HKCVKUVKO6j3J+NfSkklhGpcilZMigFAKA+LyiEnbz27VHrywjTUeE8HsJiEVjT3p8s0WQgIasVha8YHt/yo4Kyfmk18orydevKS/ef3Zyc3v1G+7IVtfSD6gnitzA8aKexIS8+Dt+/I10C2fg453mWC09NZyTE0k1Gs2uGiMXKjZhHYnpdiTbbJIeSlaSUONkkbLQR5bjuFdwKoLmhK1rOGeXUgVIOnPGeR5lasYInFupPItPscjuPpbuvs1vjJPJRS7xU02D6kBxKflX0HT73xLWNWo+nH5HQW1fNHekei2k2meHdOWhsiZdX4zUpmKZ1+vCx3cUlPJSQfPw0d0oSPPz23Ua4e+vKmoV+HLkkUdetKvP7Edl9cGoWX6qxrDp3iFki2x+T4bRuyHX5Cmwd1OL4LSlH2QTxG+3lua2alZ2+l2FW9upP3Fnh36L5vgTaOmqWFJ8SUmlOqVg1lwy8ONQ2t4E120z4ruzjTpCRuRv+JtaVevuI+NU1vG4jQo1q8d2UoqWF0z+s+RCuaPgVHFM82te9Po2mPUHkGKW5JTbUOplQQTvxYdTzSnf147lG/wCmvqGjXbubeM5c+T+RfWVbxKabM7eSnAel+3Y7+C9Zg8m5zE+Sm4bZ+6Sf7iAfmquF07O0G1tW+50LJOnDs6svja9Fw+hZfDDHV/Y47X1Q8CgFAKAUBn9PrEco1ixbHOPIXC7RYyh+lTqQr/x3qs1Or4dGcuyId3Ldg2erOtFuyW8dPuXWbEIC595n2x2HGjocS2Vl0eGdlLISNkqUe59K+Z2coRrRlN4SZzNJpTTZ522no56gLjcm4b+FtW1pRAVKm3COGmx7zwWpR/YJJrspa1Zxhwll+jLp3tFR4M9ANO8Txrp76dI1nut6ZRAs0dyVcbm992lxxSitxe3puo8Up7n8I7muQr1Z3ldyiuL5IppydWeV1IW6BSkax/SHyM4lxlCOmRLviGF+baUDw2AfikraP7prpL+LtNP8JeS/Msq6dK33TvnXfk79o6doWPRXVIVe7q2y8AduTLSVOkf60tVV6BQVS43n0RFsIb1QiLpNDTjWl2aamOpAfix02u3KPo+9tuofEAo/zUDbOP7T1bT9n4/DOXiVPwQzhfPj/I6ejDdjKfyNQw7VDUXT6JLiYVltwszMtwOvojFOziwNgo8ge+1fRLjS6Ndp1I5wQ6lpCo8yRj8pzDKc5yD68y+8ybtcfCSx7TI48uCd9k9gPLc/zUm0tIW8d2msI20aEaa3YotLld7peZaZd3uEmc+ltDKXJDhWoISNkpBPoB5CvdlYW9lTdK1pqEW28JYWW8t+rfMk+pZ1LAoBQCgFAdq6RLF9edXuOLWjk1bm5FwWNvLgypKT/rWiua2jq7ttJd8IqtSnim0Tt6gddImhGEWy+u4+q+PT53sbcRMoR9gG1LUvlxV5cUjbb81cRZWbupuKeMFJRpeK8ZLXp56g7dr1Y71KZx9VimWp9ttyIqUJBU24klDgVxT5lKxtt+Xz716vrGVq0m85M16DpPDIpdd0zOous8O1XK/znsUmQm5lut4VwYacTu26ClIHNYUOXJW5Ac2BAq/2ehTlByS95cyfp0YtN9T59AbkZvqIvjbpAdcx93wt/XaQwTt8q27RxfgR9f6M96ivcXr+Z0D6Q1T/ANVafpAPgF+cVH05cWdv8cv81D2aaU6ny/qadMxvP9dyPmVSE2TpNwuxIVxcu02RdXwPzBO6U7/JSf4qp0H/AHm2Oo3kuVGEKa8s8X9n9TonJRpRXfibTaOi/WS741CviHMciR5cZEpKJc5aHG0rSFALAbPEgHuN+1dnU2ltYTcMN48v7lXLU6SbXEj4UhDqkc0r4kjkk7g/EfCuhhLKyWUXkrWw9l/ZrPOv14atlubSt9wKV9pQSlCUpKlKUT2CQlJJPoBUPUL+jYUJXFd4isebbbwkl1bbSS7hceCLCpgXEUAoCh8qwzDJc/R/2H2nU/LslU3umFbGYSVEeRed5Hb5Mf5ri9qqmIwh3efp/wClHqsuUS5+kKvhfyrCcXSrtHiyZ60+/wARaW0n/wBS/wCai7OUN5Tn6I1abTzlnOeivNP6S6mYtnfe4QsijLtywT28UfeMn9+SCkf31P1603rffXOPE36hRzT3uxJvrkwMZL0/s5XFZ5zMblpfUoDv7O7s26PkfCV+yTVHs/ceHc7j5S+5BsKm7Ux3IOaK6jO6T622XNfCceiR3CzNYb/E5HcHFwD3kA8gPekV12pWftNCUOvT1Li6o+LTaPS7PME066kdHIjLl0Ey2PqTNt13triebLmxHJJII8iUqQoe8HYgEcFb161jVbSw1zTKCnOdCeepp1o6R8Dan4u/kt1uF/YxyOGYsJ1CGmHlAg8nUp3Ku6QeO4B9dx2qDp0qljVu61OXGvLeflz4L68yXW1KpUiopYwYHqt6jbFhWDXLT7E7ozMyu4tKiv8AsywoWxpQIWpZHk6UkhKPMb8jtsN77RtMnXqKrNe6v5niztnOSk+R50tjtX0akuB0kFg+lbTYdFYis4Npoh64lxq8ZU2lCUIH3kW18wVubHyU8U7J/Qg+iq4WpWlrmquFDDo2jby+U6+Hux9KSeX/ABtdYmcYXr9v7mlXz6l/qScMd9sNq8ZQiGbx8Yt7/ZK+Pbl+1dbpvtfstP27d8bC3t3O7vdcZ449THoY+poFAUPlWDBnsaz7OcLaktYflt4saJSkqfTbpSmQ6UghJVxPfYE/zUC5sqVd5qRTx3RGq0IVHmSyWeRZTk+Y3ZF0yy/3G9TUNBhMie+p5aUAkhIKj2G6lHb4mvVtaU6C3acUl5GaVGNNYiixhTJtsuca522W9EmRXUvsSGFFC2lpO6VJUO4IIBBrbVpRqRcZLKZ7nBSWGbbcdY9W7zaJVqu+pGTzoMptTL8aRcHFtuoUNilSSdiCPSoNLS7eElKNNZXkR42lOLykjS+P2TVlucCVjgbBieoOe4E+47hmW3ey+KeTjcOQpLbh96kfhUfiRVZc6fSr/wDJFMi1baE+aOwZNqxq7m3TnDvreoF+U5bpS4V6biyPA8RC+7a1+GE7p8h7u5rgLNKx2lq6dc/BVip0s8sr4orz6mI2NJQUlHlzI+pQeRUrcknck+pr6dTpJEmMMH1SO1SEsG1cDplgwu3YnZ2c11MjKbjKHiWzHlnhIuqh5FafNuOD+JR7qHYedcDqe0NfVq8tI2flma4VKy4wpLqk+UqnaK4R5vke1HHGRpOSZFdMryeXfry+HZclfJXEcUISBslCE/lSkAAD0AFdbpGk22k2kLK1jiEV6tvm231bfFvq2eW8vLMVVkBQCgFAU2rGBgrsKYGBWQU2FYwYwVrJkpxFYwYwbHhmZ3XCrs9JgIjyospox5tvlo5sTGj5ocT/ALEdx/NUG0GzdrrdGNOu3GcHvQnF4lCXeL+6fBmYtx5GZflaP3B/2v6sy2ylZ3XCiPMS2k/BC3OKgP7tz8araVDai2j4XiUK2OUpKcJP8SjvRz6YM+55r6F7Fz/EsSHPAcKSLiPwXnIXUzX2j722gkNIPxIUai1tl9T1f3davP8AS606KdOL8pTbc5LyykZUkvhX1NGvF6u2QXl+7Xu4yJ8188nJEhZWpXzPp7gOwrsNP0620+hG1s6ahTjySWF+vPmzz5ssKmAUAoBQCgFAKAUAoBQCgFAKAUAoBQCgFAKAUAoBQCgFAKAUAoBQCgFAKAUAoBQCgFAKAUAoBQCgFAKAUAoBQCgFAKAUAoBQCgFAKAUAoBQCgFAKAUAoD//Z" alt="RC" style="width:28px;height:28px;border-radius:6px;opacity:.55">
-    <span>Reality Creation Centre</span>
+    <span>Reality Creation</span>
   </div>
   <ul class="ft-links">
-    <li><a href="index.html">Community</a></li>
+    <li><a href="community.html">Community</a></li>
     <li><a href="podcast.html">Podcast</a></li>
     <li><a href="media.html">Media</a></li>
-    <li><a href="coaching.html">Fulfilment</a></li>
+    <li><a href="coaching.html">Coaching</a></li>
     <li><a href="partner.html">Partner</a></li>
   </ul>
-  <div class="ft-copy">© 2025 Reality Creation Centre · Joel Benesha</div>
+  <div class="ft-copy">© 2025 Reality Creation · Joel Benesha</div>
 </footer>
 
 <!-- COACHING APPLICATION MODAL -->
@@ -742,7 +773,7 @@
     <p style="font-size:14px;font-weight:300;color:rgba(243,240,235,.45);line-height:1.7;margin:0 0 36px">Joel reviews every application personally. Fill in a few details and he'll be in touch within 48 hours.</p>
 
     <form id="coaching-form" action="https://formspree.io/f/joel@realitycreationtv.com" method="POST" style="display:flex;flex-direction:column;gap:18px">
-      <input type="hidden" name="_subject" value="New Coaching Application — Reality Creation Centre">
+      <input type="hidden" name="_subject" value="New Coaching Application — Reality Creation">
       <input type="hidden" name="_replyto" id="reply-email">
 
       <div>
@@ -792,6 +823,7 @@
 </div>
 
 <script src="js/main.js"></script>
+<script src="js/diagnostic.js"></script>
 <script>
 function openCoachingForm(){
   var m=document.getElementById('coaching-modal');
@@ -821,12 +853,12 @@ document.getElementById('coaching-form').addEventListener('submit',function(e){
     } else {
       btn.textContent='Submit Application →';
       btn.disabled=false;
-      alert('Something went wrong. Please email joel@realitycreationtv.com directly.');
+      alert('Something went wrong. Please email admin@realitycreationtv.com directly.');
     }
   }).catch(function(){
     btn.textContent='Submit Application →';
     btn.disabled=false;
-    alert('Something went wrong. Please email joel@realitycreationtv.com directly.');
+    alert('Something went wrong. Please email admin@realitycreationtv.com directly.');
   });
 });
 </script>
