@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Reality Creation &mdash; a story-driven company in Brisbane helping founders, businesses, and organisations build trust through coaching, podcasting, personal branding, and event videography.">
 <title>Reality Creation &mdash; Stories Create Trust</title>
+<link rel="icon" type="image/png" href="photos/Logo real.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Reality Creation &mdash; Stories Create Trust">
+<meta property="og:description" content="A story-driven company in Brisbane helping founders, businesses, and organisations build trust through coaching, podcasting, personal branding, and event videography.">
+<meta property="og:image" content="photos/Logo real.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Reality Creation &mdash; Stories Create Trust">
+<meta name="twitter:description" content="A story-driven company in Brisbane helping founders, businesses, and organisations build trust through coaching, podcasting, personal branding, and event videography.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Libre+Baskerville:ital,wght@0,400;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
@@ -61,6 +69,58 @@
 .pillar-link{color:var(--p)!important}
 
 /* Press bar "as seen in" label stays readable on cream */
+
+/* ── Featured Work ── */
+#feat-work{background:var(--void);padding:110px 40px}
+.feat-work-wrap{max-width:1100px;margin:0 auto}
+.feat-work-hdr{margin-bottom:52px;text-align:center}
+.feat-work-label{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.feat-work-hed{font-family:'Playfair Display',serif;font-size:clamp(30px,4vw,48px);font-weight:400;color:#fff;margin:0 0 16px}
+.feat-work-hed em{font-style:italic;color:var(--gold)}
+.feat-work-sub{font-family:'Jost',sans-serif;font-size:15px;font-weight:300;line-height:1.7;color:rgba(243,240,235,.5);max-width:520px;margin:0 auto}
+.feat-work-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-bottom:44px}
+.feat-work-card{border-radius:16px;overflow:hidden;background:#0d0b18;border:1px solid rgba(255,255,255,.07);transition:border-color .3s,transform .3s}
+.feat-work-card:hover{border-color:rgba(247,195,49,.3);transform:translateY(-3px)}
+.feat-work-card iframe{width:100%;aspect-ratio:16/9;display:block;background:#000;border:0}
+.feat-work-meta{padding:16px 18px}
+.feat-work-tag{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.feat-work-title{font-family:'Playfair Display',serif;font-size:15px;font-weight:400;color:#fff;margin:0}
+.feat-work-cta{text-align:center}
+.feat-work-cta a{color:var(--gold);font-family:'Jost',sans-serif;font-size:13px;letter-spacing:.05em;text-decoration:none;border-bottom:1px solid rgba(247,195,49,.35);padding-bottom:3px}
+
+/* ── Process ── */
+#proc{background:var(--cream);padding:110px 40px}
+.proc-wrap{max-width:1100px;margin:0 auto;text-align:center}
+.proc-label{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--p);margin-bottom:14px}
+.proc-hed{font-family:'Playfair Display',serif;font-size:clamp(30px,4vw,48px);font-weight:400;color:var(--void);margin:0 0 64px}
+.proc-hed em{font-style:italic}
+.proc-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.proc-num{width:56px;height:56px;border-radius:50%;border:1px solid rgba(124,42,232,.3);display:flex;align-items:center;justify-content:center;margin:0 auto 22px;font-family:'Playfair Display',serif;font-size:20px;color:var(--p);background:rgba(124,42,232,.06)}
+.proc-title{font-family:'Playfair Display',serif;font-size:19px;font-weight:400;color:var(--void);margin:0 0 12px}
+.proc-desc{font-family:'Jost',sans-serif;font-size:13.5px;font-weight:300;line-height:1.75;color:rgba(26,24,20,.6);max-width:280px;margin:0 auto}
+
+/* ── Testimonials ── */
+#test{background:var(--void);padding:110px 40px}
+.test-wrap{max-width:1100px;margin:0 auto}
+.test-label{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:rgba(243,240,235,.35);text-align:center;margin-bottom:14px}
+.test-hed{font-family:'Playfair Display',serif;font-size:clamp(30px,4vw,48px);font-weight:400;color:#fff;text-align:center;margin:0 0 56px}
+.test-hed em{font-style:italic;color:var(--gold)}
+.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.test-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:18px;padding:32px}
+.test-quote{font-family:'Playfair Display',serif;font-size:14.5px;font-style:italic;line-height:1.75;color:rgba(243,240,235,.82);margin:0 0 26px}
+.test-person{display:flex;align-items:center;gap:12px}
+.test-avatar{width:38px;height:38px;border-radius:50%;background:rgba(124,42,232,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.test-name{font-family:'Jost',sans-serif;font-size:13.5px;font-weight:400;color:#fff}
+.test-role{font-family:'Jost',sans-serif;font-size:11.5px;font-weight:300;color:rgba(243,240,235,.4)}
+
+/* ── Final CTA ── */
+#cta-final{background:var(--cream);padding:120px 40px;text-align:center}
+.cta-final-inner{max-width:640px;margin:0 auto}
+.cta-final-label{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--p);margin-bottom:20px}
+.cta-final-hed{font-family:'Playfair Display',serif;font-size:clamp(32px,5vw,56px);font-weight:400;line-height:1.1;color:var(--void);margin:0 0 20px}
+.cta-final-hed em{font-style:italic;color:var(--p)}
+.cta-final-p{font-family:'Jost',sans-serif;font-size:15.5px;font-weight:300;line-height:1.8;color:var(--stone);max-width:480px;margin:0 auto 40px}
+.cta-final-acts{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 </style>
 </head>
 <body>
@@ -232,6 +292,53 @@
 </section>
 
 
+<!--
+     05B — FEATURED WORK
+ -->
+<section id="feat-work">
+  <div class="feat-work-wrap">
+    <div class="feat-work-hdr">
+      <div class="feat-work-label ap">Personal Branding &amp; Event Videography</div>
+      <h2 class="feat-work-hed ap d1">Stories We&rsquo;ve <em>Helped Tell</em></h2>
+      <p class="feat-work-sub ap d2">A glimpse of the brand films, interviews, and event coverage we&rsquo;ve produced for founders, businesses, and organisations.</p>
+    </div>
+    <div class="feat-work-grid">
+      <div class="feat-work-card ap">
+        <iframe src="https://www.youtube.com/embed/ECySR0MIwaM" title="Event Highlight Reel" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="feat-work-meta">
+          <div class="feat-work-tag">Event Videography</div>
+          <div class="feat-work-title">Event Highlight Reel</div>
+        </div>
+      </div>
+      <div class="feat-work-card ap d1">
+        <iframe src="https://www.youtube.com/embed/cGCvREz-i0k" title="Event Atmosphere" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="feat-work-meta">
+          <div class="feat-work-tag">Event Videography</div>
+          <div class="feat-work-title">Event Atmosphere</div>
+        </div>
+      </div>
+      <div class="feat-work-card ap d2">
+        <iframe src="https://www.youtube.com/embed/O_XsdiQMRhM" title="Storytelling — Dimension Australia" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="feat-work-meta">
+          <div class="feat-work-tag">Personal Branding</div>
+          <div class="feat-work-title">Dimension Australia</div>
+        </div>
+      </div>
+      <div class="feat-work-card ap d3">
+        <iframe src="https://www.youtube.com/embed/9iNSO9FqpXA" title="Mayor of Palmerston Interview" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="feat-work-meta">
+          <div class="feat-work-tag">Personal Branding</div>
+          <div class="feat-work-title">Mayor of Palmerston Interview</div>
+        </div>
+      </div>
+    </div>
+    <div class="feat-work-cta ap d4">
+      <a href="media.html">View All Our Work &rarr;</a>
+    </div>
+  </div>
+</section>
+
+
 
 
 <!-- 
@@ -305,6 +412,73 @@
 </section>
 
 
+<!-- PROCESS -->
+<section id="proc">
+  <div class="proc-wrap">
+    <div class="proc-label ap">How We Work</div>
+    <h2 class="proc-hed ap d1">From story <em>to impact.</em></h2>
+    <div class="proc-steps">
+      <div class="proc-step ap">
+        <div class="proc-num">1</div>
+        <div class="proc-title">Discover</div>
+        <div class="proc-desc">We take the time to learn your story, your goals, and your audience &mdash; so everything we create is intentional and authentic.</div>
+      </div>
+      <div class="proc-step ap d1">
+        <div class="proc-num">2</div>
+        <div class="proc-title">Create</div>
+        <div class="proc-desc">Coaching sessions, podcast conversations, brand films, or event coverage &mdash; always with a storytelling lens.</div>
+      </div>
+      <div class="proc-step ap d2">
+        <div class="proc-num">3</div>
+        <div class="proc-title">Share</div>
+        <div class="proc-desc">We turn that story into content that builds trust, drives real transformation, and reaches the people who matter.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- TESTIMONIALS -->
+<section id="test">
+  <div class="test-wrap">
+    <div class="test-label ap">Testimonials</div>
+    <h2 class="test-hed ap d1">What People Are <em>Saying</em></h2>
+    <div class="test-grid">
+      <div class="test-card ap">
+        <p class="test-quote">&ldquo;Joel has a rare ability to hold space for the kind of conversation most people are terrified to have with themselves. Six weeks in and I finally understood why I kept self-sabotaging every time I got close to what I said I wanted.&rdquo;</p>
+        <div class="test-person">
+          <div class="test-avatar"><svg viewBox="0 0 24 24" width="18"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="rgba(255,255,255,.4)" fill="none" stroke-width="1.5"/><circle cx="12" cy="7" r="4" stroke="rgba(255,255,255,.4)" fill="none" stroke-width="1.5"/></svg></div>
+          <div>
+            <div class="test-name">Sarah M.</div>
+            <div class="test-role">Founder &amp; CEO &middot; Coaching Client</div>
+          </div>
+        </div>
+      </div>
+      <div class="test-card ap d1">
+        <p class="test-quote">&ldquo;Working with Reality Creation transformed how we communicate our impact. The storytelling content they produced helped our community understand exactly who we are, what we do, and why it matters.&rdquo;</p>
+        <div class="test-person">
+          <div class="test-avatar"><svg viewBox="0 0 24 24" width="18"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="rgba(255,255,255,.4)" fill="none" stroke-width="1.5"/><circle cx="12" cy="7" r="4" stroke="rgba(255,255,255,.4)" fill="none" stroke-width="1.5"/></svg></div>
+          <div>
+            <div class="test-name">SAMAF Consultants</div>
+            <div class="test-role">Consulting, Accounting &amp; Community Services</div>
+          </div>
+        </div>
+      </div>
+      <div class="test-card ap d2">
+        <p class="test-quote">&ldquo;I was hesitant to share my story publicly but Joel made the whole experience feel safe and natural. The podcast feature helped my customers understand the heart behind my business &mdash; and that changed everything.&rdquo;</p>
+        <div class="test-person">
+          <div class="test-avatar"><svg viewBox="0 0 24 24" width="18"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="rgba(255,255,255,.4)" fill="none" stroke-width="1.5"/><circle cx="12" cy="7" r="4" stroke="rgba(255,255,255,.4)" fill="none" stroke-width="1.5"/></svg></div>
+          <div>
+            <div class="test-name">District North Kitchen</div>
+            <div class="test-role">Founder &amp; Business Owner</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
 <!-- SPEAKING BANNER -->
 <section id="speaking-path" style="background:var(--void);border-bottom:1px solid rgba(255,255,255,.05);border-top:1px solid rgba(255,255,255,.05)">
@@ -365,6 +539,20 @@
         Reality Creation was not built as a personal brand. It was built as a community. Joel is its founder and guide &mdash; but it belongs to everyone who walks through it.
       </div>
       <a href="#what" class="tlink ap d3">Explore Our Work <span class="arr">&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+
+<!-- FINAL CTA -->
+<section id="cta-final">
+  <div class="cta-final-inner">
+    <div class="cta-final-label ap">Get In Touch</div>
+    <h2 class="cta-final-hed ap d1">Ready to tell <em>your story?</em></h2>
+    <p class="cta-final-p ap d2">Whether it&rsquo;s coaching, a podcast feature, personal branding, or event coverage &mdash; let&rsquo;s talk about what building trust through story could look like for you.</p>
+    <div class="cta-final-acts ap d3">
+      <a href="mailto:admin@realitycreationtv.com?subject=Discovery Call" class="btn btn-fill">Book A Discovery Call</a>
+      <a href="media.html" class="btn btn-outline">Explore Our Services</a>
     </div>
   </div>
 </section>
