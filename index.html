@@ -121,6 +121,17 @@
 .cta-final-hed em{font-style:italic;color:var(--p)}
 .cta-final-p{font-family:'Jost',sans-serif;font-size:15.5px;font-weight:300;line-height:1.8;color:var(--stone);max-width:480px;margin:0 auto 40px}
 .cta-final-acts{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+/* ── Responsive: new sections ── */
+@media(max-width:960px){
+  .feat-work-grid{grid-template-columns:1fr 1fr}
+  .test-grid{grid-template-columns:1fr 1fr}
+  .proc-steps{grid-template-columns:1fr;gap:32px}
+}
+@media(max-width:640px){
+  #feat-work,#proc,#test,#cta-final{padding:80px 24px}
+  .feat-work-grid,.test-grid{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
