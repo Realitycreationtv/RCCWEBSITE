@@ -766,6 +766,8 @@ footer{background:var(--void);border-top:1px solid rgba(255,255,255,.04);padding
 @media(max-width:960px){
   body.nav-lock{overflow:hidden}
   #nav.nav-open{background:rgba(250,248,245,.97)!important;backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px)}
+  #nav.nav-open .nham{color:var(--ink)!important}
+  #nav.nav-open .nlogo-t{color:var(--ink)!important}
   #nav.nav-open .nlinks{
     display:flex;flex-direction:column;align-items:flex-start;gap:0;
     position:fixed;top:56px;left:0;right:0;bottom:0;
