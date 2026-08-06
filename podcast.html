@@ -430,19 +430,21 @@
         <div class="pod-guest-type"><span class="pod-guest-type-dot"></span>Inspiring Life Journeys</div>
       </div>
     </div>
-    <form class="pod-form" onsubmit="handleGuestForm(event)">
+    <form class="pod-form" name="podcast-guest-application" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleGuestForm(event)">
+      <input type="hidden" name="form-name" value="podcast-guest-application">
+      <p style="display:none"><label>Leave this field blank: <input name="bot-field"></label></p>
       <div class="pod-form-row">
-        <input class="pod-input" type="text" placeholder="Your Name" required>
-        <input class="pod-input" type="email" placeholder="Email Address" required>
+        <input class="pod-input" type="text" name="name" placeholder="Your Name" required>
+        <input class="pod-input" type="email" name="email" placeholder="Email Address" required>
       </div>
       <div class="pod-form-row">
-        <input class="pod-input" type="tel" placeholder="Phone Number">
-        <input class="pod-input" type="text" placeholder="Business / Organisation">
+        <input class="pod-input" type="tel" name="phone" placeholder="Phone Number">
+        <input class="pod-input" type="text" name="business" placeholder="Business / Organisation">
       </div>
-      <input class="pod-input" type="url" placeholder="Website (optional)">
-      <input class="pod-input" type="text" placeholder="Instagram / Social Media Handle">
-      <textarea class="pod-input pod-textarea" placeholder="Tell us your story &mdash; what have you been through, built, or overcome?" rows="4"></textarea>
-      <textarea class="pod-input pod-textarea" placeholder="Why would you make a great guest on Discover You?" rows="3"></textarea>
+      <input class="pod-input" type="url" name="website" placeholder="Website (optional)">
+      <input class="pod-input" type="text" name="social" placeholder="Instagram / Social Media Handle">
+      <textarea class="pod-input pod-textarea" name="story" placeholder="Tell us your story &mdash; what have you been through, built, or overcome?" rows="4"></textarea>
+      <textarea class="pod-input pod-textarea" name="why_guest" placeholder="Why would you make a great guest on Discover You?" rows="3"></textarea>
       <button type="submit" class="btn-gold" style="border:none;cursor:pointer;justify-content:center;padding:16px 32px;font-size:14px">Apply to Be a Guest &rarr;</button>
       <p class="pod-form-note">We read every application and respond within 5&ndash;7 business days.</p>
     </form>
@@ -464,14 +466,16 @@
     </div>
     <div class="pod-sponsor-form-wrap ap d2">
       <div class="pod-sponsor-form-hed">Request Sponsorship Info</div>
-      <form style="display:flex;flex-direction:column;gap:12px" onsubmit="handleSponsorForm(event)">
+      <form style="display:flex;flex-direction:column;gap:12px" name="podcast-sponsor-enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleSponsorForm(event)">
+        <input type="hidden" name="form-name" value="podcast-sponsor-enquiry">
+        <p style="display:none"><label>Leave this field blank: <input name="bot-field"></label></p>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
-          <input class="pod-input-light" type="text" placeholder="Name" required>
-          <input class="pod-input-light" type="text" placeholder="Business Name" required>
+          <input class="pod-input-light" type="text" name="name" placeholder="Name" required>
+          <input class="pod-input-light" type="text" name="business_name" placeholder="Business Name" required>
         </div>
-        <input class="pod-input-light" type="email" placeholder="Email Address" required>
-        <input class="pod-input-light" type="url" placeholder="Website">
-        <textarea class="pod-input-light pod-textarea" placeholder="Tell us about your brand..." rows="4"></textarea>
+        <input class="pod-input-light" type="email" name="email" placeholder="Email Address" required>
+        <input class="pod-input-light" type="url" name="website" placeholder="Website">
+        <textarea class="pod-input-light pod-textarea" name="message" placeholder="Tell us about your brand..." rows="4"></textarea>
         <button type="submit" class="btn btn-fill" style="border:none;cursor:pointer;text-align:center;width:100%">Send Enquiry &rarr;</button>
       </form>
     </div>
@@ -547,8 +551,30 @@
 <script src="js/main.js"></script>
 <script>
 function playPodEp(fId,iId){var f=document.getElementById(fId),i=document.getElementById(iId);f.src=f.dataset.src;f.style.display='block';i.style.display='none';i.nextElementSibling.style.display='none'}
-function handleGuestForm(e){e.preventDefault();var b=e.target.querySelector('button[type=submit]');b.textContent='Application Sent';b.style.background='#2d8a4e';b.disabled=true}
-function handleSponsorForm(e){e.preventDefault();var b=e.target.querySelector('button[type=submit]');b.textContent='Enquiry Sent';b.disabled=true}
+function handleGuestForm(e){
+  e.preventDefault();
+  var form=e.target;var b=form.querySelector('button[type=submit]');
+  var original=b.textContent;
+  b.textContent='Sending…';b.disabled=true;
+  submitNetlifyForm(form,function(){
+    b.textContent='Application Sent';b.style.background='#2d8a4e';
+  },function(){
+    b.textContent=original;b.disabled=false;
+    alert('Something went wrong. Please email admin@realitycreationtv.com directly.');
+  });
+}
+function handleSponsorForm(e){
+  e.preventDefault();
+  var form=e.target;var b=form.querySelector('button[type=submit]');
+  var original=b.textContent;
+  b.textContent='Sending…';b.disabled=true;
+  submitNetlifyForm(form,function(){
+    b.textContent='Enquiry Sent';
+  },function(){
+    b.textContent=original;b.disabled=false;
+    alert('Something went wrong. Please email admin@realitycreationtv.com directly.');
+  });
+}
 </script>
 </body>
 </html>

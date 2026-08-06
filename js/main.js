@@ -218,3 +218,20 @@ function playVideo(iframeId, thumbId, videoId) {
   if (iframe) iframe.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0&modestbranding=1';
   if (thumb)  thumb.classList.add('hidden');
 }
+
+/* ── NETLIFY FORM SUBMISSION ──
+   Submits any form registered with Netlify Forms (data-netlify="true") via AJAX
+   so the page can show an inline success/error state instead of a full reload.
+   Notification email is configured in the Netlify dashboard (Site settings → Forms). */
+function submitNetlifyForm(form, onSuccess, onError) {
+  const data = new FormData(form);
+  const body = new URLSearchParams();
+  data.forEach((value, key) => body.append(key, value));
+  fetch('/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: body.toString()
+  }).then(res => {
+    if (res.ok) { onSuccess(); } else { onError(); }
+  }).catch(() => onError());
+}
